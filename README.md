@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # E-CommerceWebsite
 
 A fully working MERN based E-commerce website This is an eCommerce web
@@ -51,4 +53,13 @@ nodemailer and gmail integration.
 - Nodemailer
 - googleapis
 - Prettier
+
 # Jadebox
+
+=======
+
+# jadebox
+
+Sri hanumant nursery website
+
+> > > > > > > 3b8e9e007b8a09db9ae427cf4aae5bbe92fafd0d
