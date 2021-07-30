@@ -510,7 +510,6 @@ progress {
 	max-width: 100%;
 	height: auto;
 }
-
 .img-thumbnail {
 	padding: 0.25rem;
 	background-color: #fff;
@@ -2770,7 +2769,6 @@ fieldset:disabled .btn {
 	pointer-events: none;
 	opacity: 0.65;
 }
-
 .btn-primary {
 	color: #fff;
 	background-color: #1a1a1a;
@@ -2781,7 +2779,6 @@ fieldset:disabled .btn {
 	background-color: #161616;
 	border-color: #151515;
 }
-
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
 	color: #fff;
@@ -5534,7 +5531,7 @@ fieldset:disabled .btn {
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
-	display: flex;
+	display: block;
 }
 .active.carousel-item-end,
 .carousel-item-next:not(.carousel-item-start) {
@@ -6986,9 +6983,6 @@ fieldset:disabled .btn {
 }
 .rounded-3 {
 	border-radius: 0.3rem !important;
-}
-.rounded-max {
-	border-radius: 10% !important;
 }
 .rounded-circle {
 	border-radius: 50% !important;
@@ -9768,18 +9762,7 @@ fieldset:disabled .btn {
 		display: none !important;
 	}
 }
-.navbar {
-	font-size: 0.875rem;
-	text-transform: uppercase;
-	font-weight: 600;
-}
-.navbar-nav .nav-link {
-	padding-top: 0.715rem;
-	padding-bottom: 0.715rem;
-}
-.navbar-brand {
-	margin-right: 2rem;
-}
+
 .bg-primary {
 	background-color: theme-color('primary') !important;
 }
@@ -9845,7 +9828,6 @@ h3,
 h4,
 h5,
 h6 {
-	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 .text-secondary {

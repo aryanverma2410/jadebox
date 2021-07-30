@@ -1,94 +1,53 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button, InputGroup } from 'react-bootstrap'
-
+import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap'
+import { Button } from '@material-ui/core'
 const Footer = () => {
 	return (
-		<footer>
+		<footer className='footer'>
 			<Container>
-				<Row className='px-5'>
-					<Col className='text-centre py-3' md='4'>
-						<Row>CONTACT US</Row>
+				<Row className='my-5'>
+					<Col sm={12} md={6} lg={4}>
+						<h4 className='my-3'>Contact Us</h4>
 
-						<Row className='py-3'>
-							<Col className='my-auto px-auto' md='1'>
-								<i className='fa fa-map-marker'></i>
-							</Col>
-							<Col>
-								Plot No. 13, Sec - 57, Phase IV, HSIIDC, Kundli Industrial
-								Estate, Sonepat, Haryana - 131028. India
-							</Col>
-						</Row>
-						<Row className='py-3'>
-							<Col className='my-auto px-auto' md='1'>
-								<i className='fa fa-phone'></i>
-							</Col>
-							<Col>+91 130 2370527, 2370528</Col>
-						</Row>
-						<Row className='py-3'>
-							<Col className='my-auto px-auto' md='1'>
-								<i className='fa fa-envelope'></i>
-							</Col>
-							<Col>
-								enquiry@vinovekitchenwares.com, info@vinovekitchenwares.com
-							</Col>
-						</Row>
+						<h7>
+							<h5 className='my-3'> Address-</h5> 6 Ashok Vihar Colony Khurram
+							Nagar Lucknow -226022, India
+						</h7>
+
+						<h7>
+							<h5 className='my-3'>Phone-</h5> 9415010585
+						</h7>
+						<h7>
+							<h5 className='my-3'>Email- </h5>srihanumantnursery@gmail.com
+						</h7>
 					</Col>
-					<Col className='text-centre py-3' md='4'>
-						LOCATE US
+					<Col sm={12} md={6} lg={4}>
+						<h4>Locate Us</h4>
 					</Col>
-					<Col className='text-centre py-3' md='4'>
-						<Form>
-							<Col>
-								<Row>
-									<InputGroup className='mb-3'>
-										<Form.Control
-											type='email'
-											name='q'
-											// onChange={(e) => setKeyword(e.target.value)}
-											placeholder='Enter your email address'
-											className='mr-sm-2ml-sm-5'></Form.Control>
-										<InputGroup.Append>
-											<InputGroup>
-												<Button type='' variant='info' className='py-auto'>
-													<i className='fa fa-paper-plane'></i>
-												</Button>
-											</InputGroup>
-										</InputGroup.Append>
-									</InputGroup>
-								</Row>
-								<Col className='my-5'>
-									<button
-										type='button'
-										class='btn btn-outline-primary p-auto m-3'
-										data-bs-toggle='tooltip'
-										data-bs-placement='left'
-										title='Facebook'>
-										<i class='fab fa-facebook-f fa-2x'></i>
-									</button>
-
-									<button
-										type='button'
-										class='btn btn-outline-primary p-auto m-3'
-										data-bs-toggle='tooltip'
-										data-bs-placement='top'
-										title='Twitter'>
-										<i class='fab fa-twitter fa-2x'></i>
-									</button>
-
-									<button
-										type='button'
-										class='btn btn-outline-primary p-auto m-3'
-										data-bs-toggle='tooltip'
-										data-bs-placement='bottom'
-										title='Instagram'>
-										<i class='fab fa-instagram fa-2x'></i>
-									</button>
-								</Col>
+					<Col sm={12} md={6} lg={4} className='my-5 py-5'>
+						<Row>
+							<Col sm={12} md={6} lg={4} className='my-2'>
+								<Button>
+									<i class='fab fa-facebook-f fa-3x'></i>
+								</Button>
 							</Col>
-						</Form>
+							<Col sm={12} md={6} lg={4} className='my-2'>
+								<Button>
+									<i class='fab fa-whatsapp fa-3x'></i>
+								</Button>
+							</Col>
+							<Col sm={12} md={6} lg={4} className='my-2'>
+								<Button>
+									<i class='fab fa-instagram fa-3x'></i>
+								</Button>
+							</Col>
+						</Row>
 					</Col>
 				</Row>
 			</Container>
+			<div align='center'>
+				<h7>Copyright@Jadebox 2021</h7>
+			</div>
 		</footer>
 	)
 }

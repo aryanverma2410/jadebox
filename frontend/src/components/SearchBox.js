@@ -21,11 +21,12 @@ const SearchBox = ({ history }) => {
 					name='q'
 					onChange={(e) => setKeyword(e.target.value)}
 					placeholder='Search Products...'
-					className='mr-sm-2ml-sm-5'></Form.Control>
+					className='mr-sm-2ml-sm-5'
+				></Form.Control>
 
 				<InputGroup.Append>
 					<InputGroup>
-						<Button type='submit' variant='outline-success' className='p-auto'>
+						<Button type='submit' variant='primary-outlined' className='p-auto'>
 							<i class='fas fa-search'></i>
 						</Button>
 					</InputGroup>

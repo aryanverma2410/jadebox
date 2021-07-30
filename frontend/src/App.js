@@ -25,7 +25,9 @@ import ScrollToTop from './components/ScrollToTop'
 import ResetPasswordMailScreen from './screens/ResetPasswordEmailScreen'
 import ResetPasswordScreen from './screens/ResetPasswordScreen'
 import WishlistScreen from './screens/WishlistScreen'
-
+import LandingScreen from './screens/LandingScreen'
+import CatalogueScreen from './screens/CatalogueScreen'
+import ProductPageScreen from './screens/ProductPageScreen'
 const App = () => {
 	return (
 		<Router>
@@ -33,6 +35,9 @@ const App = () => {
 			<Header />
 			<main className='py-3'>
 				<>
+					{' '}
+					{/* <Route path='/home' component={HomeScreen} exact /> */}
+					<Route path='/landing' component={LandingScreen} exact />
 					<Route path='/order/:id' component={OrderScreen} />
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/reset' component={ResetPasswordMailScreen} />
@@ -42,7 +47,8 @@ const App = () => {
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/profile' component={ProfileScreen} />
 					<Route path='/wishlist' component={WishlistScreen} />
-					<Route path='/product/:id' component={ProductScreen} />
+					{/* <Route path='/product/:id' component={ProductScreen} /> */}
+					<Route path='/product/:id' component={ProductPageScreen} />
 					<Route path='/cart/:id?' component={CartScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
@@ -75,15 +81,14 @@ const App = () => {
 						component={PackagingEditScreen}
 					/>
 					<Route path='/admin/orderlist' component={OrderListScreen} />
-					<Route path='/search/:keyword' component={HomeScreen} exact />
-					<Route path='/page/:pageNumber' component={HomeScreen} exact />
+					<Route path='/home' component={CatalogueScreen} />
+					<Route path='/search/:keyword' component={CatalogueScreen} exact />
+					<Route path='/page/:pageNumber' component={CatalogueScreen} exact />
 					<Route
 						path='/search/:keyword/page/:pageNumber'
-						component={HomeScreen}
+						component={CatalogueScreen}
 						exact
 					/>
-
-					<Route path='/' component={HomeScreen} exact />
 				</>
 			</main>
 			<Footer />
