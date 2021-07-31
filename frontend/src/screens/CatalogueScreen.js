@@ -14,7 +14,7 @@ import RangeSlider from 'react-bootstrap-range-slider'
 import Slider from '@material-ui/core/Slider'
 import Typography from '@material-ui/core/Typography'
 
-const HomeScreen = ({ match }) => {
+const CatalogueScreen = ({ match }) => {
 	const keyword = match.params.keyword
 
 	const pageNumber = match.params.pageNumber || 1
@@ -420,4 +420,4 @@ const HomeScreen = ({ match }) => {
 	)
 }
 
-export default HomeScreen
+export default CatalogueScreen
