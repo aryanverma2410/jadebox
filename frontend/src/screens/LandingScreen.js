@@ -122,10 +122,10 @@ const LandingScreen = () => {
 				</Row>
 			</Container>
 			<Container>
-				<Col>
+				<Col className='my-4'>
 					<e2>Want to know the journey of the plants?</e2>
 				</Col>
-				<Col className='my-4'>
+				<Col>
 					<s3>From our greenhouse to your</s3>
 				</Col>
 				<div>
