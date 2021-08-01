@@ -3,7 +3,7 @@ import { Col, Row, Image, Container } from 'react-bootstrap'
 import { Button } from '@material-ui/core'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Nav } from 'react-bootstrap'
-import { Link } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 const LandingScreen = () => {
 	return (
 		<>
@@ -30,8 +30,12 @@ const LandingScreen = () => {
 						></Image>
 
 						<Col>
-							<Button class='btn-custom-cont'>Gift Someone</Button>
-							<Button class='btn-custom-out'>Explore The Plant World</Button>
+							<Link to='/home'>
+								<Button class='btn-custom-cont'>Gift Someone</Button>
+							</Link>
+							<Link to='/home'>
+								<Button class='btn-custom-out'>Explore The Plant World</Button>
+							</Link>
 						</Col>
 					</Col>
 					<Col xs={12} s={12} md={12} lg={6}>
@@ -110,12 +114,7 @@ const LandingScreen = () => {
 						</Row>
 					</Col>
 					<div align='center' className='my-5 '>
-						<Link
-							component='button'
-							onClick={() => {
-								console.info("I'm a button.")
-							}}
-						>
+						<Link to='/home'>
 							<e4>View all</e4>
 						</Link>
 					</div>
@@ -180,41 +179,33 @@ const LandingScreen = () => {
 				<Container>
 					<Row className='my-5 '>
 						<Col align='center' className='mx-5 px-5'>
-							<div className='my-4'>
-								<Image
-									src='https://ik.imagekit.io/jadebox/stephanie-harvey-f7PfM2NklZ4-unsplash_a282yQ-gQ.jpg?updatedAt=1627315814373'
-									fluid
-									width='200'
-								></Image>
-							</div>
-							<Link
-								className='my-3'
-								component='button'
-								onClick={() => {
-									console.info("I'm a button.")
-								}}
-							>
-								<u4>Shop Online</u4>
+							<Link to='/home'>
+								<div className='my-4'>
+									<Image
+										src='https://ik.imagekit.io/jadebox/stephanie-harvey-f7PfM2NklZ4-unsplash_a282yQ-gQ.jpg?updatedAt=1627315814373'
+										fluid
+										width='200'
+									></Image>
+								</div>
 							</Link>
+							<LinkContainer to='/home'>
+								<u4>Shop Online</u4>
+							</LinkContainer>
 						</Col>
 
 						<Col align='center' className='mx-5 px-5'>
-							<div className='my-4'>
-								<Image
-									src='https://ik.imagekit.io/jadebox/stephanie-harvey-f7PfM2NklZ4-unsplash_a282yQ-gQ.jpg?updatedAt=1627315814373'
-									fluid
-									width='200'
-								></Image>
-							</div>
-							<Link
-								className='my-3'
-								component='button'
-								onClick={() => {
-									console.info("I'm a button.")
-								}}
-							>
-								<u4>Shop in-store</u4>
+							<Link to='/home'>
+								<div className='my-4'>
+									<Image
+										src='https://ik.imagekit.io/jadebox/stephanie-harvey-f7PfM2NklZ4-unsplash_a282yQ-gQ.jpg?updatedAt=1627315814373'
+										fluid
+										width='200'
+									></Image>
+								</div>
 							</Link>
+							<LinkContainer to='/home'>
+								<u4>Shop in-store</u4>
+							</LinkContainer>
 						</Col>
 					</Row>
 				</Container>

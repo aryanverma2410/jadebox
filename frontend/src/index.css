@@ -368,6 +368,9 @@ p {
 	font-family: var(--bs-font-sans-serif);
 	font-weight: normal;
 }
+.buttons-link {
+	text-decoration: none;
+}
 
 /* EXPERIMENT */
 
