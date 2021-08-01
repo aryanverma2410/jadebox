@@ -371,7 +371,9 @@ p {
 .buttons-link {
 	text-decoration: none;
 }
-
+.productpageicon {
+	width: '25%';
+}
 /* EXPERIMENT */
 
 /* ENDS HERE */

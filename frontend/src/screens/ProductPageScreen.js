@@ -162,7 +162,13 @@ const ProductPageScreen = ({ history, match }) => {
 										<Row className='my-3'>
 											<Col sm={3} md={4} lg={3}>
 												<Row align='center'>
-													<i class='fas fa-cloud-sun fa-3x'></i>
+													<div>
+														<Image
+															src='\uploads\sun.svg'
+															width={60}
+															fluid
+														></Image>
+													</div>
 												</Row>
 												<Row align='center'>
 													<b3>Sunlight</b3>
@@ -173,7 +179,13 @@ const ProductPageScreen = ({ history, match }) => {
 											</Col>
 											<Col sm={3} md={4} lg={3}>
 												<Row align='center'>
-													<i class='fas fa-tint fa-3x'></i>
+													<div>
+														<Image
+															src='\uploads\water.svg'
+															width={47.2}
+															fluid
+														></Image>
+													</div>
 												</Row>
 												<Row align='center'>
 													<b3>Water</b3>
@@ -184,7 +196,13 @@ const ProductPageScreen = ({ history, match }) => {
 											</Col>
 											<Col sm={3} md={4} lg={3}>
 												<Row align='center'>
-													<i class='fas fa-thermometer-half fa-3x'></i>
+													<div>
+														<Image
+															src='\uploads\temp.svg'
+															fluid
+															width={30}
+														></Image>
+													</div>
 												</Row>
 												<Row align='center'>
 													<b3>Temperature</b3>
@@ -195,7 +213,13 @@ const ProductPageScreen = ({ history, match }) => {
 											</Col>
 											<Col sm={3} md={4} lg={3}>
 												<Row align='center'>
-													<i class='fas fa-ruler fa-3x' c></i>
+													<div>
+														<Image
+															src='\uploads\ruler.svg'
+															fluid
+															width={59}
+														></Image>
+													</div>
 												</Row>
 												<Row align='center'>
 													<b3>Height</b3>
