@@ -1,4 +1,5 @@
 import { Container } from '@material-ui/core'
+import { display } from '@material-ui/system'
 import React from 'react'
 import { Image, Row, Col } from 'react-bootstrap'
 
@@ -6,6 +7,10 @@ const OurRoots = () => {
 	return (
 		<>
 			<Container align='center'>
+				{/* <Image
+					src='https://ik.imagekit.io/jadebox/logo_atuzP2E8a1.png?updatedAt=1628751984969'
+					className='my-3'
+				></Image> */}
 				<h1>JadeBox</h1>
 				<s4>by Sri Hanumant Nursery</s4>
 				<div align='center' className='my-4 '>
@@ -16,7 +21,7 @@ const OurRoots = () => {
 					></Image>
 				</div>
 				<Row>
-					<Col xs={12} md={8}>
+					<Col xs={12} md={7}>
 						<Image
 							src='https://ik.imagekit.io/jadebox/freddie-marriage-UcfKYTan-LU-unsplash_VRiLMauSSwx.jpg?updatedAt=1628747769659'
 							className='my-4'
@@ -65,7 +70,7 @@ const OurRoots = () => {
 							purpose (injected humour and the like).
 						</p>
 					</Col>
-					<Col xs={12} md={8}>
+					<Col xs={12} md={7}>
 						<Image
 							src='https://ik.imagekit.io/jadebox/evie-s-TNacNuuEl1o-unsplash_zuU6HfsWC62.jpg?updatedAt=1628749113739'
 							className='my-5'
