@@ -99,8 +99,8 @@ const ContactUsScreen = () => {
 						</Col>
 
 						<Col className='my-3'>
-							<Image src='/uploads/figma.svg' width='60'></Image>
-							<h5 className='my-4'>Figma</h5>
+							<Image src='/uploads/figma.svg' width='54'></Image>
+							<h5>Figma</h5>
 						</Col>
 						<Col className='my-3'>
 							<Image src='/uploads/photoshop.svg' width='80'></Image>
@@ -122,7 +122,7 @@ const ContactUsScreen = () => {
 					<Row>
 						<Col s={12} md={6} className='py-5'>
 							<h1>Srishti Mittal</h1>
-							<s3>UI/UX</s3>
+							<s3>UI/UX Designer</s3>
 							<p className='my-4'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
 								ut urna diam. Mauris ac tellus ut est semper sagittis non
@@ -131,8 +131,8 @@ const ContactUsScreen = () => {
 								molestie sodales. Donec neque tellus, vulputate vel augue
 								dignissim, condimentum viverra elit.
 							</p>
-							<Row>
-								<Col className='my-3' md={6} lg={4}>
+							<Row className='my-5'>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname:
@@ -143,10 +143,9 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-instagram fa-2x'></i>
 										</Col>
-										<h6>@rain_and_moss</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname:
@@ -157,10 +156,9 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-facebook-f fa-2x'></i>
 										</Col>
-										<h6>Srishti Mittal</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname: 'https://www.linkedin.com/in/srishtayyye',
@@ -170,26 +168,22 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-linkedin-in fa-2x'></i>
 										</Col>
-										<h6>Srishti .</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
-									<Col>
+								<Col className='my-3' md={6} lg={3}>
+									<a href='mailto:srishtimittal726@gmail.com'>
 										<i class='far fa-envelope fa-2x'></i>
-									</Col>
-									<a href='mailto:shrasti101@gmail.com'>
-										<h6>shrasti101@gmail.com</h6>
 									</a>
 								</Col>
 							</Row>
 							<Row>
 								<s2 className='my-3'>Skills Used</s2>
 								<Col>
-									<Image src='\uploads\writing.svg' width='50'></Image>
+									<Image src='\uploads\figma.svg' width='40'></Image>
 								</Col>
 
 								<Col>
-									<Image src='\uploads\illustrator.svg' width='50'></Image>
+									<Image src='\uploads\illustrator.svg' width='70'></Image>
 								</Col>
 								{/* <Col>
 									<Image src='\uploads\writing.svg' width='50'></Image>
@@ -234,8 +228,8 @@ const ContactUsScreen = () => {
 								molestie sodales. Donec neque tellus, vulputate vel augue
 								dignissim, condimentum viverra elit.
 							</p>
-							<Row>
-								<Col className='my-3' md={6} lg={4}>
+							<Row className='my-5'>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname:
@@ -246,10 +240,9 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-instagram fa-2x'></i>
 										</Col>
-										<h6>@_.sss18._</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname: 'https://www.facebook.com/shrasti.shukla',
@@ -259,10 +252,9 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-facebook-f fa-2x'></i>
 										</Col>
-										<h6>Shrasti Shukla</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
+								<Col className='my-3' md={6} lg={3}>
 									<Link
 										to={{
 											pathname:
@@ -273,26 +265,22 @@ const ContactUsScreen = () => {
 										<Col>
 											<i class='fab fa-linkedin-in fa-2x'></i>
 										</Col>
-										<h6>Shrasti Shukla</h6>
 									</Link>
 								</Col>
-								<Col className='my-3' md={6} lg={4}>
-									<Col>
-										<i class='far fa-envelope fa-2x'></i>
-									</Col>
+								<Col className='my-3' md={6} lg={3}>
 									<a href='mailto:shrasti101@gmail.com'>
-										<h6>shrasti101@gmail.com</h6>
+										<i class='far fa-envelope fa-2x'></i>
 									</a>
 								</Col>
 							</Row>
 							<Row>
 								<s2 className='my-3'>Skills Used</s2>
 								<Col>
-									<Image src='\uploads\writing.svg' width='50'></Image>
+									<Image src='\uploads\writing.svg' width='65'></Image>
 								</Col>
 
 								<Col>
-									<Image src='\uploads\illustrator.svg' width='50'></Image>
+									<Image src='\uploads\illustrator.svg' width='70'></Image>
 								</Col>
 								{/* <Col>
 									<Image src='\uploads\writing.svg' width='50'></Image>
