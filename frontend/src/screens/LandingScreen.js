@@ -37,6 +37,12 @@ const LandingScreen = () => {
 								<Button class='btn-custom-out'>Explore The Plant World</Button>
 							</Link>
 						</Col>
+						<Row className='my-5'>
+							<Col xs={12}>
+								<h5>Present By</h5>
+								<e1>Sri Hanumant Nursery</e1>
+							</Col>
+						</Row>
 					</Col>
 					<Col xs={12} s={12} md={12} lg={6}>
 						<Image

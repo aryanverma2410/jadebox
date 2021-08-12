@@ -128,7 +128,7 @@
 			font-size: 30px;
 		}
 		.main-page-line {
-			margin-top: 15vh;
+			margin-top: 13vh;
 		}
 		.nav-link {
 			font-family: var(--bs-font-extended);
@@ -147,7 +147,7 @@
 
 @media (min-width: 1400px) {
 	.main-page-line {
-		margin-top: 25vh;
+		margin-top: 20vh;
 	}
 	.nav-link {
 		font-family: var(--bs-font-extended);
@@ -177,6 +177,12 @@ e2 {
 	color: var(--bs-primary);
 	font-size: 1.8rem;
 }
+e3 {
+	font-family: var(--bs-font-extended);
+	color: var(--bs-primary);
+	font-size: 1.2rem;
+}
+
 e4 {
 	font-family: var(--bs-font-extended);
 	color: var(--bs-primary);
@@ -326,6 +332,7 @@ h5 {
 	font-family: var(--bs-font-sans-serif);
 	font-size: 1rem;
 	font-weight: bold;
+	color: var(--bs-text);
 }
 h8 {
 	font-size: 12px;
