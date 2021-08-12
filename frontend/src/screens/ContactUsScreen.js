@@ -99,8 +99,8 @@ const ContactUsScreen = () => {
 						</Col>
 
 						<Col className='my-3'>
-							<Image src='/uploads/figma.svg' width='54'></Image>
-							<h5>Figma</h5>
+							<i class='fab fa-figma fa-5x'></i>
+							<h5 className='my-4'>Figma</h5>
 						</Col>
 						<Col className='my-3'>
 							<Image src='/uploads/photoshop.svg' width='80'></Image>
@@ -179,7 +179,7 @@ const ContactUsScreen = () => {
 							<Row>
 								<s2 className='my-3'>Skills Used</s2>
 								<Col>
-									<Image src='\uploads\figma.svg' width='40'></Image>
+									<i class='fab fa-figma fa-4x'></i>
 								</Col>
 
 								<Col>
