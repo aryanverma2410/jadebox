@@ -37,7 +37,7 @@ const LoginScreen = ({ location, history }) => {
 					{/* <Figure.Image src={loginPic} alt='Login Image' height='100vh' fluid />
 					 */}
 					<Figure.Image
-						src='https://ik.imagekit.io/jadebox/brigitte-tohm-EAay7Aj4jbc-unsplash_PvZfr07dU.jpg?updatedAt=1628753714981'
+						src='https://ik.imagekit.io/jadebox/laura-chouette-ygDQPXeqBmY-unsplash_0h4mCTKCVcK.jpg?updatedAt=1628754037849'
 						alt='Login'
 						width='400'
 						fluid
