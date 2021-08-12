@@ -39,7 +39,7 @@ const LoginScreen = ({ location, history }) => {
 					<Figure.Image
 						src='https://ik.imagekit.io/jadebox/laura-chouette-ygDQPXeqBmY-unsplash_0h4mCTKCVcK.jpg?updatedAt=1628754037849'
 						alt='Login'
-						width='300'
+						width='350'
 						fluid
 					/>
 				</center>
