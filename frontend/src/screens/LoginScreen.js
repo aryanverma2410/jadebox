@@ -31,22 +31,21 @@ const LoginScreen = ({ location, history }) => {
 	}
 
 	return (
-		<Row>
+		<Row className='my-5'>
 			<Col md={6}>
 				<center>
 					{/* <Figure.Image src={loginPic} alt='Login Image' height='100vh' fluid />
 					 */}
 					<Figure.Image
-						src={loginPic}
+						src='https://ik.imagekit.io/jadebox/brigitte-tohm-EAay7Aj4jbc-unsplash_PvZfr07dU.jpg?updatedAt=1628753714981'
 						alt='Login'
-						width={300}
-						height={500}
+						width='400'
 						fluid
 					/>
 				</center>
 			</Col>
 
-			<Col md={6} className=' py-20'>
+			<Col md={6} className=' my-5 py-20'>
 				<FormContainer>
 					<h1>Sign In</h1>
 					{error && <Message variant='danger'>{error}</Message>}
@@ -58,7 +57,8 @@ const LoginScreen = ({ location, history }) => {
 								type='email'
 								placeholder='Enter email'
 								value={email}
-								onChange={(e) => setEmail(e.target.value)}></Form.Control>
+								onChange={(e) => setEmail(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='password'>
@@ -67,7 +67,8 @@ const LoginScreen = ({ location, history }) => {
 								type='password'
 								placeholder='Enter password'
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}></Form.Control>
+								onChange={(e) => setPassword(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Row className='py-3'>
@@ -86,7 +87,8 @@ const LoginScreen = ({ location, history }) => {
 						<Col>
 							New Customer?{' '}
 							<Link
-								to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+								to={redirect ? `/register?redirect=${redirect}` : '/register'}
+							>
 								Register
 							</Link>
 						</Col>
