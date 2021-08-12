@@ -188,6 +188,11 @@ e4 {
 	color: var(--bs-primary);
 	font-size: 0.9rem;
 }
+e5 {
+	font-family: var(--bs-font-extended);
+	color: var(--bs-primary);
+	font-size: 1.5rem;
+}
 s4 {
 	font-family: var(--bs-font-sans-serif);
 	color: var(--bs-text);
