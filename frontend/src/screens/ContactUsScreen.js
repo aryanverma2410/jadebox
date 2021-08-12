@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 const ContactUsScreen = () => {
 	return (
 		<>
@@ -119,16 +120,9 @@ const ContactUsScreen = () => {
 				</h1>
 				<div>
 					<Row>
-						<Col className='my-5' s={12} md={6}>
-							<Image
-								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
-								width='350'
-								fluid
-							></Image>
-						</Col>
 						<Col s={12} md={6} className='py-5'>
-							<h1>Shrasti Sanjay Shukla</h1>
-							<s3>Logo Designer</s3>
+							<h1>Srishti Mittal</h1>
+							<s3>UI/UX</s3>
 							<p className='my-4'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
 								ut urna diam. Mauris ac tellus ut est semper sagittis non
@@ -139,37 +133,156 @@ const ContactUsScreen = () => {
 							</p>
 							<Row>
 								<Col className='my-3' md={6} lg={4}>
-									<Link>
+									<Link
+										to={{
+											pathname:
+												'https://instagram.com/rain_and_moss?utm_medium=copy_link',
+										}}
+										target='_blank'
+									>
 										<Col>
 											<i class='fab fa-instagram fa-2x'></i>
 										</Col>
-										<h6>@jadebox_21</h6>
+										<h6>@rain_and_moss</h6>
 									</Link>
 								</Col>
 								<Col className='my-3' md={6} lg={4}>
-									<Link>
+									<Link
+										to={{
+											pathname:
+												'https://www.facebook.com/profile.php?id=100010617643042',
+										}}
+										target='_blank'
+									>
 										<Col>
 											<i class='fab fa-facebook-f fa-2x'></i>
 										</Col>
-										<h6>@jadebox_21</h6>
+										<h6>Srishti Mittal</h6>
 									</Link>
 								</Col>
 								<Col className='my-3' md={6} lg={4}>
-									<Link>
+									<Link
+										to={{
+											pathname: 'https://www.linkedin.com/in/srishtayyye',
+										}}
+										target='_blank'
+									>
 										<Col>
 											<i class='fab fa-linkedin-in fa-2x'></i>
 										</Col>
-										<h6>+919140382988</h6>
+										<h6>Srishti .</h6>
 									</Link>
 								</Col>
 								<Col className='my-3' md={6} lg={4}>
-									<Link>
-										<Col>
-											<i class='far fa-envelope fa-2x'></i>
-										</Col>
-
+									<Col>
+										<i class='far fa-envelope fa-2x'></i>
+									</Col>
+									<a href='mailto:shrasti101@gmail.com'>
 										<h6>shrasti101@gmail.com</h6>
+									</a>
+								</Col>
+							</Row>
+							<Row>
+								<s2 className='my-3'>Skills Used</s2>
+								<Col>
+									<Image src='\uploads\writing.svg' width='50'></Image>
+								</Col>
+
+								<Col>
+									<Image src='\uploads\illustrator.svg' width='50'></Image>
+								</Col>
+								{/* <Col>
+									<Image src='\uploads\writing.svg' width='50'></Image>
+								</Col>
+
+								<Col>
+									<Image src='\uploads\illustrator.svg' width='50'></Image>
+								</Col> */}
+							</Row>
+						</Col>
+						<Col className='my-5' s={12} md={6}>
+							<Image
+								src='https://ik.imagekit.io/jadebox/shristi_2_U0mFZnIVj.jpeg?updatedAt=1628784652632'
+								width='500'
+								fluid
+							></Image>
+						</Col>
+					</Row>
+					<div align='center' className='my-5 '>
+						<Image
+							src='https://ik.imagekit.io/jadebox/Vector_yBwVInDn_.png?updatedAt=1627316189474'
+							fluid
+							width={20}
+						></Image>
+					</div>
+					<Row>
+						<Col className='my-5' s={12} md={6}>
+							<Image
+								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
+								width='400'
+								fluid
+							></Image>
+						</Col>
+						<Col s={12} md={6} className='py-5'>
+							<h1>Shrasti Sanjay Shukla</h1>
+							<s3>Logo Designer & Writer</s3>
+							<p className='my-4'>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+								ut urna diam. Mauris ac tellus ut est semper sagittis non
+								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
+								tortor non iaculis ornare. Proin dictum sapien vel lacus
+								molestie sodales. Donec neque tellus, vulputate vel augue
+								dignissim, condimentum viverra elit.
+							</p>
+							<Row>
+								<Col className='my-3' md={6} lg={4}>
+									<Link
+										to={{
+											pathname:
+												'https://instagram.com/_.sss18._?utm_medium=copy_link',
+										}}
+										target='_blank'
+									>
+										<Col>
+											<i class='fab fa-instagram fa-2x'></i>
+										</Col>
+										<h6>@_.sss18._</h6>
 									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link
+										to={{
+											pathname: 'https://www.facebook.com/shrasti.shukla',
+										}}
+										target='_blank'
+									>
+										<Col>
+											<i class='fab fa-facebook-f fa-2x'></i>
+										</Col>
+										<h6>Shrasti Shukla</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link
+										to={{
+											pathname:
+												'https://www.linkedin.com/in/shrasti-shukla-22a08b1b5',
+										}}
+										target='_blank'
+									>
+										<Col>
+											<i class='fab fa-linkedin-in fa-2x'></i>
+										</Col>
+										<h6>Shrasti Shukla</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Col>
+										<i class='far fa-envelope fa-2x'></i>
+									</Col>
+									<a href='mailto:shrasti101@gmail.com'>
+										<h6>shrasti101@gmail.com</h6>
+									</a>
 								</Col>
 							</Row>
 							<Row>
@@ -198,69 +311,6 @@ const ContactUsScreen = () => {
 							width={20}
 						></Image>
 					</div>
-					<Row>
-						<Col s={12} md={6} className='py-5'>
-							<h1>Shrasti Sanjay Shukla</h1>
-							<s3>Logo Designer</s3>
-							<p className='my-4'>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-								ut urna diam. Mauris ac tellus ut est semper sagittis non
-								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
-								tortor non iaculis ornare. Proin dictum sapien vel lacus
-								molestie sodales. Donec neque tellus, vulputate vel augue
-								dignissim, condimentum viverra elit. Sed imperdiet nisi sit amet
-								eros convallis, a eleifend orci blandit. Ut euismod scelerisque
-								erat eget luctus. Phasellus finibus et lacus eu pellentesque.
-								Vestibulum suscipit rhoncus augue vitae vulputate. Nullam mattis
-								eros a mollis auctor. Morbi pellentesque nulla nunc, eget
-								maximus felis pretium ac. Maecenas et lorem mattis, efficitur
-								nunc at, condimentum lacus. In vitae placerat felis. Mauris
-								tempus nec felis sed convallis. Praesent quis turpis tortor.
-							</p>
-							<Row>
-								<Col className='my-3' md={6} lg={4}>
-									<Link>
-										<Col>
-											<i class='fab fa-instagram fa-2x'></i>
-										</Col>
-										<h6>@jadebox_21</h6>
-									</Link>
-								</Col>
-								<Col className='my-3' md={6} lg={4}>
-									<Link>
-										<Col>
-											<i class='fab fa-facebook-f fa-2x'></i>
-										</Col>
-										<h6>@jadebox_21</h6>
-									</Link>
-								</Col>
-								<Col className='my-3' md={6} lg={4}>
-									<Link>
-										<Col>
-											<i class='fab fa-linkedin-in fa-2x'></i>
-										</Col>
-										<h6>+919140382988</h6>
-									</Link>
-								</Col>
-								<Col className='my-3' md={6} lg={4}>
-									<Link>
-										<Col>
-											<i class='far fa-envelope fa-2x'></i>
-										</Col>
-
-										<h6>shrasti101@gmail.com</h6>
-									</Link>
-								</Col>
-							</Row>
-						</Col>
-						<Col className='my-5' s={12} md={6}>
-							<Image
-								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
-								width='350'
-								fluid
-							></Image>
-						</Col>
-					</Row>
 				</div>
 			</Container>
 		</>
