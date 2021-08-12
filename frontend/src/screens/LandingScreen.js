@@ -39,7 +39,9 @@ const LandingScreen = () => {
 						</Col>
 						<Row className='my-5'>
 							<Col xs={12}>
-								<h5>Presented By</h5>
+								<Col>
+									<s2>Presented By</s2>
+								</Col>
 								<e5>Sri Hanumant Nursery</e5>
 							</Col>
 						</Row>

@@ -29,8 +29,8 @@ const Footer = () => {
 
 						<iframe
 							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d629.0612280611923!2d80.96671016409297!3d26.887378527477154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999573db3d78eb7%3A0xea0f409d9055cb2b!2sSri%20Hanumant%20Nursery!5e0!3m2!1sen!2sin!4v1628779164914!5m2!1sen!2sin'
-							width='300'
-							height='300'
+							width='250'
+							height='250'
 							allowfullscreen=''
 							loading='lazy'
 						></iframe>
