@@ -269,6 +269,9 @@ c3 {
 .fas {
 	color: var(--bs-primary);
 }
+.fab {
+	color: var(--bs-primary);
+}
 @media (max-width: 576px) {
 	.main-story {
 		width: 50%;

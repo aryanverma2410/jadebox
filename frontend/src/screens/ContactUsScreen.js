@@ -70,14 +70,48 @@ const ContactUsScreen = () => {
 						width={20}
 					></Image>
 				</div>
+
+				<h1 className='my-5'>Tech Used</h1>
+				<div>
+					<Row className='my-5'>
+						<Col className='my-3'>
+							<Image src='/uploads/illustrator.svg' width='80'></Image>
+							<h5>Adobe Illustrator</h5>
+						</Col>
+						<Col className='my-3'>
+							<i class='fab fa-node fa-5x'></i>
+							<h5 className='my-4'>NodeJs</h5>
+						</Col>
+
+						<Col className='my-3'>
+							<i class='fas fa-database fa-5x'></i>
+							<h5 className='my-4'>MongoDb</h5>
+						</Col>
+						<Col className='my-3'>
+							<i class='fab fa-react fa-5x '></i>
+							<h5 className='my-4'>ReactJs</h5>
+						</Col>
+
+						<Col className='my-3'>
+							<i class='fas fa-server fa-5x'></i>
+							<h5 className='my-4'>NGINX</h5>
+						</Col>
+
+						<Col className='my-3'>
+							<Image src='/uploads/figma.svg' width='60'></Image>
+							<h5 className='my-4'>Figma</h5>
+						</Col>
+						<Col className='my-3'>
+							<Image src='/uploads/photoshop.svg' width='80'></Image>
+							<h5>Adobe Photoshop</h5>
+						</Col>
+					</Row>
+				</div>
 				<h1 align='center' className='my-5'>
 					Our Team
 				</h1>
-
 				<div>
 					<Row>
-						<s1>Designers</s1>
-
 						<Col className='my-5' s={12} md={6}>
 							<Image
 								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
@@ -94,14 +128,7 @@ const ContactUsScreen = () => {
 								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
 								tortor non iaculis ornare. Proin dictum sapien vel lacus
 								molestie sodales. Donec neque tellus, vulputate vel augue
-								dignissim, condimentum viverra elit. Sed imperdiet nisi sit amet
-								eros convallis, a eleifend orci blandit. Ut euismod scelerisque
-								erat eget luctus. Phasellus finibus et lacus eu pellentesque.
-								Vestibulum suscipit rhoncus augue vitae vulputate. Nullam mattis
-								eros a mollis auctor. Morbi pellentesque nulla nunc, eget
-								maximus felis pretium ac. Maecenas et lorem mattis, efficitur
-								nunc at, condimentum lacus. In vitae placerat felis. Mauris
-								tempus nec felis sed convallis. Praesent quis turpis tortor.
+								dignissim, condimentum viverra elit.
 							</p>
 							<Row>
 								<Col className='my-3' md={6} lg={4}>
@@ -137,6 +164,23 @@ const ContactUsScreen = () => {
 										<h6>shrasti101@gmail.com</h6>
 									</Link>
 								</Col>
+							</Row>
+							<Row>
+								<s2 className='my-3'>Skills Used</s2>
+								<Col>
+									<Image src='\uploads\writing.svg' width='50'></Image>
+								</Col>
+
+								<Col>
+									<Image src='\uploads\illustrator.svg' width='50'></Image>
+								</Col>
+								{/* <Col>
+									<Image src='\uploads\writing.svg' width='50'></Image>
+								</Col>
+
+								<Col>
+									<Image src='\uploads\illustrator.svg' width='50'></Image>
+								</Col> */}
 							</Row>
 						</Col>
 					</Row>
