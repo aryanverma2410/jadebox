@@ -73,116 +73,144 @@ const ContactUsScreen = () => {
 				<h1 align='center' className='my-5'>
 					Our Team
 				</h1>
-				<s1>Developers</s1>
-				<Row className='my-5'>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-code fa-2x'></i>
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-code fa-2x'></i>
 
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-				</Row>
-				<s1>Designers</s1>
-				<Row className='my-5'>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-palette fa-2x'></i>
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-palette fa-2x'></i>
+				<div>
+					<Row>
+						<s1>Designers</s1>
 
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-				</Row>
-				<s1>Photography</s1>
-				<Row className='my-5'>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-camera-retro fa-2x'></i>
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-camera-retro fa-2x'></i>
+						<Col className='my-5' s={12} md={6}>
+							<Image
+								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
+								width='350'
+								fluid
+							></Image>
+						</Col>
+						<Col s={12} md={6} className='py-5'>
+							<h1>Shrasti Sanjay Shukla</h1>
+							<s3>Logo Designer</s3>
+							<p className='my-4'>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+								ut urna diam. Mauris ac tellus ut est semper sagittis non
+								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
+								tortor non iaculis ornare. Proin dictum sapien vel lacus
+								molestie sodales. Donec neque tellus, vulputate vel augue
+								dignissim, condimentum viverra elit. Sed imperdiet nisi sit amet
+								eros convallis, a eleifend orci blandit. Ut euismod scelerisque
+								erat eget luctus. Phasellus finibus et lacus eu pellentesque.
+								Vestibulum suscipit rhoncus augue vitae vulputate. Nullam mattis
+								eros a mollis auctor. Morbi pellentesque nulla nunc, eget
+								maximus felis pretium ac. Maecenas et lorem mattis, efficitur
+								nunc at, condimentum lacus. In vitae placerat felis. Mauris
+								tempus nec felis sed convallis. Praesent quis turpis tortor.
+							</p>
+							<Row>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-instagram fa-2x'></i>
+										</Col>
+										<h6>@jadebox_21</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-facebook-f fa-2x'></i>
+										</Col>
+										<h6>@jadebox_21</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-linkedin-in fa-2x'></i>
+										</Col>
+										<h6>+919140382988</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='far fa-envelope fa-2x'></i>
+										</Col>
 
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-				</Row>
-				<s1>Server And Google Analytics</s1>
-				<Row className='my-5'>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-server fa-2x'></i>
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-server fa-2x'></i>
+										<h6>shrasti101@gmail.com</h6>
+									</Link>
+								</Col>
+							</Row>
+						</Col>
+					</Row>
+					<div align='center' className='my-5 '>
+						<Image
+							src='https://ik.imagekit.io/jadebox/Vector_yBwVInDn_.png?updatedAt=1627316189474'
+							fluid
+							width={20}
+						></Image>
+					</div>
+					<Row>
+						<Col s={12} md={6} className='py-5'>
+							<h1>Shrasti Sanjay Shukla</h1>
+							<s3>Logo Designer</s3>
+							<p className='my-4'>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+								ut urna diam. Mauris ac tellus ut est semper sagittis non
+								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
+								tortor non iaculis ornare. Proin dictum sapien vel lacus
+								molestie sodales. Donec neque tellus, vulputate vel augue
+								dignissim, condimentum viverra elit. Sed imperdiet nisi sit amet
+								eros convallis, a eleifend orci blandit. Ut euismod scelerisque
+								erat eget luctus. Phasellus finibus et lacus eu pellentesque.
+								Vestibulum suscipit rhoncus augue vitae vulputate. Nullam mattis
+								eros a mollis auctor. Morbi pellentesque nulla nunc, eget
+								maximus felis pretium ac. Maecenas et lorem mattis, efficitur
+								nunc at, condimentum lacus. In vitae placerat felis. Mauris
+								tempus nec felis sed convallis. Praesent quis turpis tortor.
+							</p>
+							<Row>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-instagram fa-2x'></i>
+										</Col>
+										<h6>@jadebox_21</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-facebook-f fa-2x'></i>
+										</Col>
+										<h6>@jadebox_21</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='fab fa-linkedin-in fa-2x'></i>
+										</Col>
+										<h6>+919140382988</h6>
+									</Link>
+								</Col>
+								<Col className='my-3' md={6} lg={4}>
+									<Link>
+										<Col>
+											<i class='far fa-envelope fa-2x'></i>
+										</Col>
 
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-				</Row>
-				<s1>Writing</s1>
-				<Row className='my-5'>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-feather fa-2x'></i>
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-					<Col xs={12} s={12} md={6}>
-						<Row>
-							<Col xs={12}>
-								<i class='fas fa-feather fa-2x'></i>
-
-								<Image></Image>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Col>
-				</Row>
+										<h6>shrasti101@gmail.com</h6>
+									</Link>
+								</Col>
+							</Row>
+						</Col>
+						<Col className='my-5' s={12} md={6}>
+							<Image
+								src='https://ik.imagekit.io/jadebox/shrasti_pnXxeKQGHlS.jpg?updatedAt=1628762258076'
+								width='350'
+								fluid
+							></Image>
+						</Col>
+					</Row>
+				</div>
 			</Container>
 		</>
 	)
