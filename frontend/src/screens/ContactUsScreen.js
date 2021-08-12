@@ -107,6 +107,13 @@ const ContactUsScreen = () => {
 						</Col>
 					</Row>
 				</div>
+				<div align='center'>
+					<Image
+						src='https://ik.imagekit.io/jadebox/Vector_yBwVInDn_.png?updatedAt=1627316189474'
+						fluid
+						width={20}
+					></Image>
+				</div>
 				<h1 align='center' className='my-5'>
 					Our Team
 				</h1>
