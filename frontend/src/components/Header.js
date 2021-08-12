@@ -33,11 +33,11 @@ const Header = () => {
 						<LinkContainer to='/home'>
 							<Nav.Link>Adopt a plant</Nav.Link>
 						</LinkContainer>
-						<LinkContainer to='/home'>
+						<LinkContainer to='/ourroots'>
 							<Nav.Link>Our Roots</Nav.Link>
 						</LinkContainer>
 
-						<LinkContainer to='/home'>
+						<LinkContainer to='/contactus'>
 							<Nav.Link>Contact us</Nav.Link>
 						</LinkContainer>
 

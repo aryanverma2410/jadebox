@@ -161,7 +161,11 @@
 			border-color 0.15s ease-in-out;
 	}
 }
-
+s1 {
+	font-family: var(--bs-font-sans-serif);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 s2 {
 	font-family: var(--bs-font-sans-serif);
 	font-size: 0.9rem;

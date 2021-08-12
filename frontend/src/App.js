@@ -28,6 +28,8 @@ import WishlistScreen from './screens/WishlistScreen'
 import LandingScreen from './screens/LandingScreen'
 import CatalogueScreen from './screens/CatalogueScreen'
 import ProductPageScreen from './screens/ProductPageScreen'
+import OurRootsScreen from './screens/OurRootsScreen'
+import ContactUsScreen from './screens/ContactUsScreen'
 const App = () => {
 	return (
 		<Router>
@@ -50,6 +52,8 @@ const App = () => {
 					<Route path='/cart/:id?' component={CartScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
+					<Route path='/ourroots' component={OurRootsScreen} />
+					<Route path='/contactus' component={ContactUsScreen} />
 					<Route
 						path='/api/user/confirmation/:token'
 						component={UserConfirmScreen}
