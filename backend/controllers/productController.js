@@ -63,9 +63,18 @@ const createProduct = asyncHandler(async (req, res) => {
 		image: '/image/sample.jpg',
 		brand: 'sample brand',
 		category: 'sample category',
+		category1: 'sample category1',
+		category2: 'sample category2(sub category)',
 		countInStock: 0,
 		numReviews: 0,
 		description: 'Sample description',
+		keyword1: 'Easy to care',
+		keyword2: 'Air Cleaner',
+		keyword3: 'Pet Friendly',
+		sunlight: 'Needs sun',
+		water: 'Every 7 days',
+		temprature: 'Min 25 deg C',
+		height: '15-20 cm',
 	})
 
 	const createdProduct = await product.save()
@@ -76,8 +85,24 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 const updateProduct = asyncHandler(async (req, res) => {
-	const { name, price, description, image, brand, category, countInStock } =
-		req.body
+	const {
+		name,
+		price,
+		description,
+		image,
+		brand,
+		category,
+		category1,
+		category2,
+		countInStock,
+		keyword1,
+		keyword2,
+		keyword3,
+		sunlight,
+		water,
+		temprature,
+		height,
+	} = req.body
 
 	const product = await Product.findById(req.params.id)
 
@@ -87,8 +112,17 @@ const updateProduct = asyncHandler(async (req, res) => {
 		product.description = description
 		product.image = image
 		product.brand = brand
-		product.category = category
+		product.category1 = category1
+		product.category2 = category2
+		product.category = name + ' ' + category1 + ' ' + category2 + ' ' + category
 		product.countInStock = countInStock
+		product.keyword1 = keyword1
+		product.keyword2 = keyword2
+		product.keyword3 = keyword3
+		product.sunlight = sunlight
+		product.water = water
+		product.temprature = temprature
+		product.height = height
 
 		const updatedProduct = await product.save()
 		res.json(updatedProduct)

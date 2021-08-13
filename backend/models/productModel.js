@@ -39,6 +39,14 @@ const productSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		category1: {
+			type: String,
+			required: true,
+		},
+		category2: {
+			type: String,
+			required: true,
+		},
 		description: {
 			type: String,
 			required: true,
@@ -63,6 +71,34 @@ const productSchema = mongoose.Schema(
 			type: Number,
 			required: true,
 			default: 0,
+		},
+		keyword1: {
+			type: String,
+			required: true,
+		},
+		keyword2: {
+			type: String,
+			required: true,
+		},
+		keyword3: {
+			type: String,
+			required: true,
+		},
+		sunlight: {
+			type: String,
+			required: true,
+		},
+		water: {
+			type: String,
+			required: true,
+		},
+		temprature: {
+			type: String,
+			required: true,
+		},
+		height: {
+			type: String,
+			required: true,
 		},
 	},
 	{
