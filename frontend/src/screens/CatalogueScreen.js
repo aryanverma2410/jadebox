@@ -5,14 +5,12 @@ import Product from '../components/Product'
 import Message from '../components/Message.js'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
-import Jumbo from '../components/Jumbo'
+
 import { Row, Col, Card, Container, Form } from 'react-bootstrap'
 import { listProducts } from '../actions/productActions'
 import ProductCarousel from '../components/ProductCarousel'
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css'
-import RangeSlider from 'react-bootstrap-range-slider'
 import Slider from '@material-ui/core/Slider'
-import Typography from '@material-ui/core/Typography'
 
 const CatalogueScreen = ({ match }) => {
 	const keyword = match.params.keyword
@@ -132,13 +130,12 @@ const CatalogueScreen = ({ match }) => {
 					<Container>
 						<Row className='catalogue-page'>
 							<Col className='my-5'>
-								<Link>
-									{' '}
+								<Link to='/'>
 									<h7 className='my-3'>Home > </h7>
 								</Link>
-								<Link>
+								<Link to='/home'>
 									{' '}
-									<h7 className='my-3'>Plants</h7>
+									<h7 className='my-3'>Categories</h7>
 								</Link>
 
 								<h5 className='my-3'>Categories</h5>

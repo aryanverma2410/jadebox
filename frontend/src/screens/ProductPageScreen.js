@@ -97,18 +97,19 @@ const ProductPageScreen = ({ history, match }) => {
 					<Container>
 						<Row>
 							<Col>
-								<Link>
+								<Link to='/'>
 									<h7 className='my-3'>Home > </h7>
 								</Link>
-								<Link>
-									<h7 className='my-3'>Plants ></h7>
+								<Link to='/home'>
+									<h7 className='my-3'>Catalogue > </h7>
 								</Link>
-								<Link>
-									<h7 className='my-3'>Botanical Plants ></h7>
+								<Link to='/product/6102653095ca240714b9a836'>
+									<h7 className='my-3'>{product.category1} > </h7>
 								</Link>
-								<Link>
-									<h7 className='my-3'>Little Montesrra </h7>
+								<Link to='/product/60ffafb9b29ae9155450621d'>
+									<h7 className='my-3'>{product.category2} </h7>
 								</Link>
+
 								<Col className='my-5' align='center'>
 									<Figure.Image
 										src={product.image}
