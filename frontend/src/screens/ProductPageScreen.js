@@ -147,9 +147,15 @@ const ProductPageScreen = ({ history, match }) => {
 												<b1> Rs {product.price}</b1>
 											</Col>
 											<Col className='my-3'>
-												<Button class='btn-out-primary '>Easy To Care</Button>
-												<Button class='btn-out-primary '>Air Cleaner</Button>
-												<Button class='btn-out-primary '>Pet Friendly</Button>
+												<Button disabled class='btn-out-primary '>
+													{product.keyword1}
+												</Button>
+												<Button disabled class='btn-out-primary  '>
+													{product.keyword2}
+												</Button>
+												<Button disabled class='btn-out-primary  '>
+													{product.keyword3}
+												</Button>
 											</Col>
 										</Row>
 									</ListGroup>
@@ -174,7 +180,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<b3>Sunlight</b3>
 												</Row>
 												<Row align='center'>
-													<h6>Needs sun</h6>
+													<h6>{product.sunlight}</h6>
 												</Row>
 											</Col>
 											<Col sm={3} md={4} lg={3}>
@@ -191,7 +197,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<b3>Water</b3>
 												</Row>
 												<Row align='center'>
-													<h6>Every 7 days</h6>
+													<h6>{product.water}</h6>
 												</Row>
 											</Col>
 											<Col sm={3} md={4} lg={3}>
@@ -208,7 +214,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<b3>Temperature</b3>
 												</Row>
 												<Row align='center'>
-													<h6>Min 25 deg C</h6>
+													<h6>{product.temprature}</h6>
 												</Row>
 											</Col>
 											<Col sm={3} md={4} lg={3}>
@@ -225,7 +231,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<b3>Height</b3>
 												</Row>
 												<Row align='center'>
-													<h6>15-20 cm</h6>
+													<h6>{product.height}</h6>
 												</Row>
 											</Col>
 										</Row>

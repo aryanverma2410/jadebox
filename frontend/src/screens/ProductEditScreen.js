@@ -385,9 +385,9 @@ const ProductEditScreen = ({ match, history }) => {
 								</select>
 							</Form.Group>
 
-							<Button type='submit' variant='primary' className='my-3'>
+							<button type='submit' class='btn btn-outline-primary'>
 								Update
-							</Button>
+							</button>
 						</Form>
 					)}
 				</FormContainer>

@@ -1,5 +1,6 @@
+import { Button } from '@material-ui/core'
 import React, { useState } from 'react'
-import { Form, Button, InputGroup } from 'react-bootstrap'
+import { Form, InputGroup } from 'react-bootstrap'
 
 const SearchBox = ({ history }) => {
 	const [keyword, setKeyword] = useState('')
@@ -26,7 +27,7 @@ const SearchBox = ({ history }) => {
 
 				<InputGroup.Append>
 					<InputGroup>
-						<Button type='submit' variant='primary-outlined' className='p-auto'>
+						<Button type='submit' className='my-1'>
 							<i class='fas fa-search'></i>
 						</Button>
 					</InputGroup>
