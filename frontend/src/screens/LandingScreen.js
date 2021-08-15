@@ -98,7 +98,7 @@ const LandingScreen = () => {
 						></Image>
 					</Col>
 					<div align='center' className='my-5 '>
-						<Link to='/home'>
+						<Link to='/home' className='btn btn-light my-3'>
 							<e4>View all</e4>
 						</Link>
 					</div>
