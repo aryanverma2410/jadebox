@@ -357,6 +357,10 @@ const ProductPageScreen = ({ history, match }) => {
 						<Row>
 							<ListGroup variant='flush'>
 								<h5 className='mx-1 my-3 px-1'>Description</h5>
+								<h6 className='mx-1  px-1'>Botanical Name : </h6>
+								<p className='mx-1  px-1'>{product.botanicalname}</p>
+								<h6 className='mx-1  px-1'>Origin : </h6>
+								<p className='mx-1  px-1'>{product.origin}</p>
 								<p className='mx-1 my-3 px-1'> {product.description}</p>
 							</ListGroup>
 							<hr className='mx-1 my-3 px-1'></hr>

@@ -96,6 +96,14 @@ const productSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		botanicalname: {
+			type: String,
+			required: true,
+		},
+		origin: {
+			type: String,
+			required: true,
+		},
 		height: {
 			type: String,
 			required: true,

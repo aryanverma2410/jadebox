@@ -24,6 +24,8 @@ const ProductEditScreen = ({ match, history }) => {
 	const [keyword2, setKeyword2] = useState('')
 	const [keyword3, setKeyword3] = useState('')
 	const [sunlight, setSunlight] = useState('')
+	const [origin, setOrigin] = useState('')
+	const [botanicalname, setBotanicalname] = useState('')
 	const [water, setWater] = useState('')
 	const [height, setHeight] = useState('')
 	const [temprature, setTemprature] = useState('')
@@ -63,6 +65,8 @@ const ProductEditScreen = ({ match, history }) => {
 				setKeyword3(product.keyword3)
 				setSunlight(product.sunlight)
 				setWater(product.water)
+				setBotanicalname(product.botanicalname)
+				setOrigin(product.origin)
 				setTemprature(product.temprature)
 				setHeight(product.height)
 				setCountInStock(product.countInStock)
@@ -111,6 +115,8 @@ const ProductEditScreen = ({ match, history }) => {
 				keyword3,
 				sunlight,
 				water,
+				origin,
+				botanicalname,
 				temprature,
 				height,
 				description,
@@ -149,6 +155,26 @@ const ProductEditScreen = ({ match, history }) => {
 									placeholder='Enter name'
 									value={name}
 									onChange={(e) => setName(e.target.value)}
+								></Form.Control>
+							</Form.Group>
+
+							<Form.Group controlId='botanicalname'>
+								<Form.Label>Botanical Name</Form.Label>
+								<Form.Control
+									type='botanicalname'
+									placeholder='Enter Botanical Name'
+									value={botanicalname}
+									onChange={(e) => setBotanicalname(e.target.value)}
+								></Form.Control>
+							</Form.Group>
+
+							<Form.Group controlId='origin'>
+								<Form.Label>Origin</Form.Label>
+								<Form.Control
+									type='origin'
+									placeholder='Enter Origin'
+									value={origin}
+									onChange={(e) => setOrigin(e.target.value)}
 								></Form.Control>
 							</Form.Group>
 

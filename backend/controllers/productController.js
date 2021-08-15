@@ -69,6 +69,8 @@ const createProduct = asyncHandler(async (req, res) => {
 		numReviews: 0,
 		description: 'Sample description',
 		keyword1: 'Easy to care',
+		botanicalname: 'Botanical Name',
+		origin: 'Origin',
 		keyword2: 'Air Cleaner',
 		keyword3: 'Pet Friendly',
 		sunlight: 'Needs sun',
@@ -98,6 +100,8 @@ const updateProduct = asyncHandler(async (req, res) => {
 		keyword1,
 		keyword2,
 		keyword3,
+		origin,
+		botanicalname,
 		sunlight,
 		water,
 		temprature,
@@ -114,13 +118,24 @@ const updateProduct = asyncHandler(async (req, res) => {
 		product.brand = brand
 		product.category1 = category1
 		product.category2 = category2
-		product.category = name + ' ' + category1 + ' ' + category2 + ' ' + category
+		product.category =
+			name +
+			' ' +
+			botanicalname +
+			' ' +
+			category1 +
+			' ' +
+			category2 +
+			' ' +
+			category
 		product.countInStock = countInStock
 		product.keyword1 = keyword1
 		product.keyword2 = keyword2
 		product.keyword3 = keyword3
 		product.sunlight = sunlight
 		product.water = water
+		product.origin = origin
+		product.botanicalname = botanicalname
 		product.temprature = temprature
 		product.height = height
 
