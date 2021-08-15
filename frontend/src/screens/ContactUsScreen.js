@@ -124,12 +124,10 @@ const ContactUsScreen = () => {
 							<h1>Srishti Mittal</h1>
 							<s3>UI/UX Designer</s3>
 							<p className='my-4'>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-								ut urna diam. Mauris ac tellus ut est semper sagittis non
-								tristique tortor. Sed quis euismod nulla. Donec ullamcorper
-								tortor non iaculis ornare. Proin dictum sapien vel lacus
-								molestie sodales. Donec neque tellus, vulputate vel augue
-								dignissim, condimentum viverra elit.
+								I design products and pieces, make art and watch anime. I am
+								fond of note-taking, moodboards and pressed flowers. I like to
+								experiment in my work and design things which bring some value
+								to someone’s life.
 							</p>
 							<Row className='my-5'>
 								<Col className='my-3' md={6} lg={3}>

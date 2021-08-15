@@ -67,59 +67,35 @@ const LandingScreen = () => {
 				<Row className='my-5'>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
-							src='https://ik.imagekit.io/jadebox/annie-spratt-fbAnIjhrOL4-unsplash_KfixXgqTg.jpg?updatedAt=1627315814371'
+							src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
 							fluid
 						></Image>
-						<Row>
+						{/* <Row>
 							<Col>
 								<s4>Plant Name</s4>
 							</Col>
 							<Col align='right'>
 								<s4>Rs 400</s4>
 							</Col>
-						</Row>
+						</Row> */}
 					</Col>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
 							src='https://ik.imagekit.io/jadebox/annie-spratt-fbAnIjhrOL4-unsplash_KfixXgqTg.jpg?updatedAt=1627315814371'
 							fluid
 						></Image>
-						<Row>
-							<Col>
-								<s4>Plant Name</s4>
-							</Col>
-							<Col align='right'>
-								<s4>Rs 400</s4>
-							</Col>
-						</Row>
 					</Col>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
 							src='https://ik.imagekit.io/jadebox/annie-spratt-fbAnIjhrOL4-unsplash_KfixXgqTg.jpg?updatedAt=1627315814371'
 							fluid
 						></Image>
-						<Row>
-							<Col>
-								<s4>Plant Name</s4>
-							</Col>
-							<Col align='right'>
-								<s4>Rs 400</s4>
-							</Col>
-						</Row>
 					</Col>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
 							src='https://ik.imagekit.io/jadebox/annie-spratt-fbAnIjhrOL4-unsplash_KfixXgqTg.jpg?updatedAt=1627315814371'
 							fluid
 						></Image>
-						<Row>
-							<Col>
-								<s4>Plant Name</s4>
-							</Col>
-							<Col align='right'>
-								<s4>Rs 400</s4>
-							</Col>
-						</Row>
 					</Col>
 					<div align='center' className='my-5 '>
 						<Link to='/home'>
