@@ -397,6 +397,9 @@ p {
 .productpageicon {
 	width: '25%';
 }
+.form-label {
+	margin-top: 2rem;
+}
 /* EXPERIMENT */
 
 /* ENDS HERE */

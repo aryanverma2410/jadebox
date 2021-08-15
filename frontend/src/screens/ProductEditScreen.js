@@ -8,7 +8,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
-
+import { Select, MenuItem } from '@material-ui/core'
 const ProductEditScreen = ({ match, history }) => {
 	const productId = match.params.id
 
@@ -118,7 +118,14 @@ const ProductEditScreen = ({ match, history }) => {
 			})
 		)
 	}
-
+	const brands = ['brand1 ', 'brand2']
+	const categories = ['Plants', 'Tools', 'etc']
+	const subcategory = ['succulent', 'bonsai', 'etc']
+	const waterlevel = ['bhut', 'kam', 'etc']
+	const heightincm = ['lamba', 'chota', 'etc']
+	const temperature = ['garam', 'naram', 'thanda']
+	const sunlightamount = ['tez', 'mid', 'indoor']
+	const keywords = ['Air Cleaner', 'Pet Friendly', 'Easy To Care']
 	return (
 		<>
 			<Container>
@@ -126,7 +133,7 @@ const ProductEditScreen = ({ match, history }) => {
 					Go Back
 				</Link>
 				<FormContainer>
-					<h1>Edit Product</h1>
+					<h1>Create / Edit Product</h1>
 					{loadingUpdate && <Loader />}
 					{errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
 					{loading ? (
@@ -172,16 +179,6 @@ const ProductEditScreen = ({ match, history }) => {
 								{uploading && <Loader />}
 							</Form.Group>
 
-							<Form.Group controlId='brand'>
-								<Form.Label>Brand</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter brand'
-									value={brand}
-									onChange={(e) => setBrand(e.target.value)}
-								></Form.Control>
-							</Form.Group>
-
 							<Form.Group controlId='countInStock'>
 								<Form.Label>Count In Stock</Form.Label>
 								<Form.Control
@@ -189,16 +186,6 @@ const ProductEditScreen = ({ match, history }) => {
 									placeholder='Enter countInStock'
 									value={countInStock}
 									onChange={(e) => setCountInStock(e.target.value)}
-								></Form.Control>
-							</Form.Group>
-
-							<Form.Group controlId='category'>
-								<Form.Label>Category</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter category'
-									value={category}
-									onChange={(e) => setCategory(e.target.value)}
 								></Form.Control>
 							</Form.Group>
 
@@ -212,97 +199,193 @@ const ProductEditScreen = ({ match, history }) => {
 								></Form.Control>
 							</Form.Group>
 
-							<Form.Group controlId='category1'>
-								<Form.Label>Category1</Form.Label>
+							<Form.Group controlId='category'>
+								<Form.Label>SearchTerms</Form.Label>
 								<Form.Control
+									type='text'
+									placeholder='SearchTerms'
+									value={category}
+									onChange={(e) => setCategory(e.target.value)}
+								></Form.Control>
+							</Form.Group>
+
+							<Form.Group controlId='brand'>
+								<Form.Label>Brand</Form.Label>
+								<select
+									className='form-select'
+									value={brand}
+									onChange={(e) => setBrand(e.target.value)}
+								>
+									{brands.map((brand) => {
+										return (
+											<option key={brand.value} value={brand.value}>
+												{brand}
+											</option>
+										)
+									})}
+								</select>
+							</Form.Group>
+
+							<Form.Group controlId='category1'>
+								<Form.Label>Category</Form.Label>
+								{/* <Form.Control
 									type='text'
 									placeholder='Enter description'
 									value={category1}
 									onChange={(e) => setCategory1(e.target.value)}
-								></Form.Control>
+								></Form.Control> */}
+								<select
+									value={category1}
+									onChange={(e) => setCategory1(e.target.value)}
+									className='form-select'
+								>
+									{categories.map((category1) => {
+										return (
+											<option key={category1.value} value={category1.value}>
+												{category1}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='category2'>
-								<Form.Label>Category2</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<Form.Label>SubCategory</Form.Label>
+								<select
 									value={category2}
 									onChange={(e) => setCategory2(e.target.value)}
-								></Form.Control>
+									className='form-select'
+								>
+									{subcategory.map((category2) => {
+										return (
+											<option key={category2.value} value={category2.value}>
+												{category2}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='keyword1'>
 								<Form.Label>Keyword1</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
 									value={keyword1}
 									onChange={(e) => setKeyword1(e.target.value)}
-								></Form.Control>
+									className='form-select'
+								>
+									{keywords.map((keyword1) => {
+										return (
+											<option key={keyword1.value} value={keyword1.value}>
+												{keyword1}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='keyword2'>
 								<Form.Label>Keyword2</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
+									className='form-select'
 									value={keyword2}
 									onChange={(e) => setKeyword2(e.target.value)}
-								></Form.Control>
+								>
+									{keywords.map((keyword2) => {
+										return (
+											<option key={keyword2.value} value={keyword2.value}>
+												{keyword2}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='keyword3'>
 								<Form.Label>Keyword3</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
+									className='form-select'
 									value={keyword3}
 									onChange={(e) => setKeyword3(e.target.value)}
-								></Form.Control>
+								>
+									{keywords.map((keyword3) => {
+										return (
+											<option key={keyword3.value} value={keyword3.value}>
+												{keyword3}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='sunlight'>
 								<Form.Label>Sunlight</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
+									className='form-select'
 									value={sunlight}
 									onChange={(e) => setSunlight(e.target.value)}
-								></Form.Control>
+								>
+									{sunlightamount.map((sunlight) => {
+										return (
+											<option key={sunlight.value} value={sunlight.value}>
+												{sunlight}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='water'>
 								<Form.Label>Water</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
+									className='form-select'
 									value={water}
 									onChange={(e) => setWater(e.target.value)}
-								></Form.Control>
+								>
+									{waterlevel.map((water) => {
+										return (
+											<option key={water.value} value={water.value}>
+												{water}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='temprature'>
 								<Form.Label>Temperature</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<select
+									className='form-select'
 									value={temprature}
 									onChange={(e) => setTemprature(e.target.value)}
-								></Form.Control>
+								>
+									{temperature.map((temprature) => {
+										return (
+											<option key={temprature.value} value={temprature.value}>
+												{temprature}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
 							<Form.Group controlId='height'>
-								<Form.Label>Height</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Enter description'
+								<Form.Label>Height in Cm</Form.Label>
+								<select
+									className='form-select'
 									value={height}
 									onChange={(e) => setHeight(e.target.value)}
-								></Form.Control>
+								>
+									{heightincm.map((height) => {
+										return (
+											<option key={height.value} value={height.value}>
+												{height}
+											</option>
+										)
+									})}
+								</select>
 							</Form.Group>
 
-							<Button type='submit' variant='primary'>
+							<Button type='submit' variant='primary' className='my-3'>
 								Update
 							</Button>
 						</Form>
