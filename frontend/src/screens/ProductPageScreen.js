@@ -98,15 +98,17 @@ const ProductPageScreen = ({ history, match }) => {
 						<Row>
 							<Col>
 								<Link to='/'>
-									<h7 className='my-3'>Home > </h7>
+									<h7 className='my-3'>Home {'>'} </h7>
 								</Link>
 								<Link to='/home'>
-									<h7 className='my-3'>Catalogue > </h7>
+									<h7 className='my-3'>Catalogue {'>'} </h7>
 								</Link>
-								<Link to='/product/6102653095ca240714b9a836'>
-									<h7 className='my-3'>{product.category1} > </h7>
+								<Link to={`/search/${product.category1}`}>
+									<h7 className='my-3'>
+										{product.category1} {'>'}{' '}
+									</h7>
 								</Link>
-								<Link to='/product/60ffafb9b29ae9155450621d'>
+								<Link to={`/search/${product.category2}`}>
 									<h7 className='my-3'>{product.category2} </h7>
 								</Link>
 
@@ -173,8 +175,7 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\sun.svg'
 															width={60}
-															fluid
-														></Image>
+															fluid></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -190,8 +191,7 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\water.svg'
 															width={47.2}
-															fluid
-														></Image>
+															fluid></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -207,8 +207,7 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\temp.svg'
 															fluid
-															width={30}
-														></Image>
+															width={30}></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -224,8 +223,7 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\ruler.svg'
 															fluid
-															width={59}
-														></Image>
+															width={59}></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -288,8 +286,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<select
 														class='form-select  bg-color: transparent'
 														value={qty}
-														onChange={(e) => setQty(e.target.value)}
-													>
+														onChange={(e) => setQty(e.target.value)}>
 														{[...Array(product.countInStock).keys()].map(
 															(x) => (
 																<option key={x + 1} value={x + 1}>
@@ -323,8 +320,7 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-cont'
-												disabled={product.countInStock === 0}
-											>
+												disabled={product.countInStock === 0}>
 												Add to cart
 											</Button>
 
@@ -333,8 +329,7 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-out'
-												disabled={product.countInStock === 0}
-											>
+												disabled={product.countInStock === 0}>
 												Buy Now
 											</Button>
 										</Col>
@@ -344,8 +339,7 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-out'
-												disabled={product.countInStock === 0}
-											>
+												disabled={product.countInStock === 0}>
 												<i class='fas fa-heart mx-2'></i>
 												Keep as a wish
 											</Button>
@@ -508,8 +502,7 @@ const ProductPageScreen = ({ history, match }) => {
 													<select
 														class='form-select  bg-color: transparent'
 														value={rating}
-														onChange={(e) => setRating(e.target.value)}
-													>
+														onChange={(e) => setRating(e.target.value)}>
 														<option value=''>Select...</option>
 														<option value='1'>1 - Poor</option>
 														<option value='2'>2 - Fair</option>
@@ -524,15 +517,15 @@ const ProductPageScreen = ({ history, match }) => {
 														as='textarea'
 														row='3'
 														value={comment}
-														onChange={(e) => setComment(e.target.value)}
-													></Form.Control>
+														onChange={(e) =>
+															setComment(e.target.value)
+														}></Form.Control>
 												</Form.Group>
 												<Button
 													className='rounded-3 my-auto'
 													disabled={loadingProductReview}
 													type='submit'
-													variant='primary'
-												>
+													variant='primary'>
 													Submit
 												</Button>
 											</Form>
