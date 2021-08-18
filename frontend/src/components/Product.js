@@ -1,4 +1,4 @@
-import { Card, Image, Row, Col } from 'react-bootstrap'
+import { Card, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
 const Product = ({ product }) => {
@@ -8,7 +8,12 @@ const Product = ({ product }) => {
 				{' '}
 				<Link to={`/product/${product._id}`} style={{ textDecoration: 'none' }}>
 					<div className='img-wrapper'>
-						<img src={product.image} variant='top' className='hover-zoom' />
+						<img
+							src={product.image}
+							variant='top'
+							className='hover-zoom'
+							alt='Product'
+						/>
 					</div>
 				</Link>{' '}
 				<Card.Body>

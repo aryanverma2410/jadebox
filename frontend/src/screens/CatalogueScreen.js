@@ -131,7 +131,7 @@ const CatalogueScreen = ({ match }) => {
 						<Row className='catalogue-page'>
 							<Col className='my-5'>
 								<Link to='/'>
-									<h7 className='my-3'>Home > </h7>
+									<h7 className='my-3'>Home {'>'} </h7>
 								</Link>
 								<Link to='/home'>
 									{' '}

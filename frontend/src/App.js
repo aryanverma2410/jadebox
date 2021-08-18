@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
+
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
-import ProductScreen from './screens/ProductScreen'
+
 import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
@@ -30,6 +30,7 @@ import CatalogueScreen from './screens/CatalogueScreen'
 import ProductPageScreen from './screens/ProductPageScreen'
 import OurRootsScreen from './screens/OurRootsScreen'
 import ContactUsScreen from './screens/ContactUsScreen'
+import BlogScreen from './screens/BlogScreen'
 const App = () => {
 	return (
 		<Router>
@@ -54,6 +55,7 @@ const App = () => {
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
 					<Route path='/ourroots' component={OurRootsScreen} />
 					<Route path='/contactus' component={ContactUsScreen} />
+					<Route path='/blog' component={BlogScreen} />
 					<Route
 						path='/api/user/confirmation/:token'
 						component={UserConfirmScreen}
