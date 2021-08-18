@@ -41,8 +41,8 @@
 .nav-link {
 	display: block;
 	font-family: var(--bs-font-extended);
-	font-size: 0.85rem;
-	padding: 0.5rem 1.3rem;
+	font-size: 0.8rem;
+	padding: 0.5rem 1.2rem;
 	color: #1a1a1a;
 	text-decoration: none;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
