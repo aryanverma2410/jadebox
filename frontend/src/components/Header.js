@@ -2,11 +2,21 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, NavDropdown, Figure } from 'react-bootstrap'
+import {
+	Navbar,
+	Nav,
+	Container,
+	NavDropdown,
+	Figure,
+	Table,
+	Row,
+	Col,
+	Dropdown,
+} from 'react-bootstrap'
 import { logout } from '../actions/userActions'
 import SearchBox from './SearchBox.js'
 import logo from '../img/logo.png'
-
+import DropdownMenu from 'react-overlays/esm/DropdownMenu'
 const Header = () => {
 	const dispatch = useDispatch()
 
@@ -16,6 +26,7 @@ const Header = () => {
 	const logoutHandler = () => {
 		dispatch(logout())
 	}
+
 	return (
 		<header>
 			<Navbar variant='light' expand='xxl' collapseOnSelect>
@@ -41,56 +52,24 @@ const Header = () => {
 								menuVariant='dark'
 								className='mx-0'
 							>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
+								<NavDropdown.Menu>
+									<NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.2'>
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.3'>
+										Something else here
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item eventKey='4.4'>
+										Separated link
+									</NavDropdown.Item>
+								</NavDropdown.Menu>
 							</NavDropdown>
 						</LinkContainer>
 						<LinkContainer to='/blog'>
 							<Nav.Link>Blog</Nav.Link>
 						</LinkContainer>
-
 						<Nav className='ms-auto'>
 							{/* <LinkContainer to='/'>
 								<Nav.Link> About Us</Nav.Link>
@@ -127,15 +106,15 @@ const Header = () => {
 							/>
 
 							<LinkContainer to='/wishlist'>
-								<Nav.Link>
+								<Nav.Link className='my-2'>
 									{' '}
-									<i className='fas fa-heart fa-2x	'></i>
+									<i className='fas fa-heart fa-lg	'></i>
 								</Nav.Link>
 							</LinkContainer>
 							<LinkContainer to='/cart'>
-								<Nav.Link>
+								<Nav.Link className='my-2'>
 									{' '}
-									<i className='fas fa-shopping-cart fa-2x	'></i>
+									<i className='fas fa-shopping-cart fa-lg	'></i>
 								</Nav.Link>
 							</LinkContainer>
 							{userInfo ? (

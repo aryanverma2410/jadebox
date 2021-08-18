@@ -27,8 +27,8 @@ const SearchBox = ({ history }) => {
 
 				<InputGroup.Append>
 					<InputGroup>
-						<Button type='submit' className='my-1'>
-							<i class='fas fa-search'></i>
+						<Button type='submit' className='my-2'>
+							<i class='fas fa-search '></i>
 						</Button>
 					</InputGroup>
 				</InputGroup.Append>

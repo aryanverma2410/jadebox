@@ -38,6 +38,7 @@
 	background-color: var(--bs-background);
 	padding-bottom: 0.5rem;
 }
+
 .nav-link {
 	display: block;
 	font-family: var(--bs-font-extended);
@@ -47,6 +48,13 @@
 	text-decoration: none;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 		border-color 0.15s ease-in-out;
+}
+.nav-link:active {
+	text-decoration: underline;
+	text-decoration: underline 3px;
+}
+.nav-link:hover {
+	text-decoration: underline 3px;
 }
 .form-control::placeholder {
 	font-family: var(--bs-font-sans-serif);
@@ -252,11 +260,20 @@ c3 {
 .fas {
 	color: var(--bs-primary);
 }
+.fas:hover {
+	color: black;
+}
 .fab {
 	color: var(--bs-primary);
 }
+.fab:hover {
+	color: black;
+}
 .far {
 	color: var(--bs-primary);
+}
+.far:hover {
+	color: black;
 }
 @media (max-width: 576px) {
 	.main-story {
