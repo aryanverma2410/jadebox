@@ -18,7 +18,7 @@ const Header = () => {
 	}
 	return (
 		<header>
-			<Navbar variant='light' expand='lg' collapseOnSelect>
+			<Navbar variant='light' expand='xxl' collapseOnSelect>
 				<Container>
 					<LinkContainer to='/'>
 						<Navbar.Brand>
@@ -33,17 +33,13 @@ const Header = () => {
 						<LinkContainer to='/home'>
 							<Nav.Link>Adopt a plant</Nav.Link>
 						</LinkContainer>
-						<LinkContainer to='/ourroots'>
-							<Nav.Link>Our Roots</Nav.Link>
-						</LinkContainer>
-						<LinkContainer to='/blog'>
-							<Nav.Link>Blog</Nav.Link>
-						</LinkContainer>
+
 						<LinkContainer to='/ourroots'>
 							<NavDropdown
 								id='nav-dropdown-dark-example'
 								title='Categories'
 								menuVariant='dark'
+								className='mx-0'
 							>
 								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
 								<NavDropdown.Item href='#action/3.2'>
@@ -91,11 +87,11 @@ const Header = () => {
 								</NavDropdown.Item>
 							</NavDropdown>
 						</LinkContainer>
+						<LinkContainer to='/blog'>
+							<Nav.Link>Blog</Nav.Link>
+						</LinkContainer>
 
 						<Nav className='ms-auto'>
-							<Route
-								render={({ history }) => <SearchBox history={history} />}
-							/>
 							{/* <LinkContainer to='/'>
 								<Nav.Link> About Us</Nav.Link>
 							</LinkContainer>
@@ -114,7 +110,6 @@ const Header = () => {
 							<LinkContainer to='/'>
 								<Nav.Link> Careers</Nav.Link>
 							</LinkContainer> */}
-
 							{/******************************************************
 							 ********************ADD CATEGORIES HERE***************
 							 *****************************************************/}
@@ -127,20 +122,28 @@ const Header = () => {
 								</LinkContainer>
 							</NavDropdown> */}
 
+							<Route
+								render={({ history }) => <SearchBox history={history} />}
+							/>
+
 							<LinkContainer to='/wishlist'>
 								<Nav.Link>
 									{' '}
-									<i className='fas fa-heart fa-lg	'></i>
+									<i className='fas fa-heart fa-2x	'></i>
 								</Nav.Link>
 							</LinkContainer>
 							<LinkContainer to='/cart'>
 								<Nav.Link>
 									{' '}
-									<i className='fas fa-shopping-cart fa-lg	'></i>
+									<i className='fas fa-shopping-cart fa-2x	'></i>
 								</Nav.Link>
 							</LinkContainer>
 							{userInfo ? (
-								<NavDropdown title={userInfo.name} id='username'>
+								<NavDropdown
+									title={userInfo.name}
+									id='username'
+									className='my-2 mx-3'
+								>
 									<LinkContainer to='/profile'>
 										<NavDropdown.Item>Profile</NavDropdown.Item>
 									</LinkContainer>
