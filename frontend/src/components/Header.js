@@ -45,28 +45,21 @@ const Header = () => {
 							<Nav.Link>Adopt a plant</Nav.Link>
 						</LinkContainer>
 
-						<LinkContainer to='/ourroots'>
-							<NavDropdown
-								id='nav-dropdown-dark-example'
-								title='Categories'
-								menuVariant='dark'
-								className='mx-0'
-							>
-								<NavDropdown.Menu>
-									<NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
-									<NavDropdown.Item eventKey='4.2'>
-										Another action
-									</NavDropdown.Item>
-									<NavDropdown.Item eventKey='4.3'>
-										Something else here
-									</NavDropdown.Item>
-									<NavDropdown.Divider />
-									<NavDropdown.Item eventKey='4.4'>
-										Separated link
-									</NavDropdown.Item>
-								</NavDropdown.Menu>
-							</NavDropdown>
-						</LinkContainer>
+						<NavDropdown
+							id='nav-dropdown-dark-example'
+							title='Categories'
+							menuVariant='dark'
+							className='mx-0'
+						>
+							<NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
+							<NavDropdown.Item eventKey='4.2'>Another action</NavDropdown.Item>
+							<NavDropdown.Item eventKey='4.3'>
+								Something else here
+							</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item eventKey='4.4'>Separated link</NavDropdown.Item>
+						</NavDropdown>
+
 						<LinkContainer to='/blog'>
 							<Nav.Link>Blog</Nav.Link>
 						</LinkContainer>
