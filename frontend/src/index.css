@@ -483,16 +483,6 @@ h2 {
 	}
 } */
 
-.btn-primary {
-	color: #fff;
-	background-color: #15b3ac;
-	border-color: #15b3ac;
-}
-.btn-primary:hover {
-	color: #fff;
-	background-color: #179992;
-	border-color: #151515;
-}
 /* .jumbotron {
 	background-image: url('img/Jumbotron.jpg');
 	background-size: 100% 100%;

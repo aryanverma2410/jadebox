@@ -11,46 +11,57 @@ const responsive = {
 	767: { items: 2 },
 	1023: { items: 3 },
 }
+
 const items = [
 	<div className='item' data-value='1'>
-		<Button>
-			<Image
-				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
-				width='300'
-			></Image>
-		</Button>
+		<Link to='/home'>
+			<Button>
+				<Image
+					src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+					width='300'
+				></Image>
+			</Button>
+		</Link>
 	</div>,
 	<div className='item' data-value='2'>
-		<Button>
-			<Image
-				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
-				width='300'
-			></Image>
-		</Button>
+		<Link to='/home'>
+			<Button>
+				<Image
+					src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+					width='300'
+				></Image>
+			</Button>
+		</Link>
 	</div>,
 	<div className='item' data-value='3'>
-		<Button>
-			<Image
-				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
-				width='300'
-			></Image>
-		</Button>
+		<Link to='/home'>
+			<Button>
+				<Image
+					src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+					width='300'
+				></Image>
+			</Button>
+		</Link>
 	</div>,
 	<div className='item' data-value='4'>
-		<Button>
-			<Image
-				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
-				width='300'
-			></Image>
-		</Button>
+		<Link to='/home'>
+			<Button>
+				<Image
+					src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+					width='300'
+				></Image>
+			</Button>
+		</Link>
 	</div>,
 	<div className='item' data-value='5'>
-		<Button>
-			<Image
-				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
-				width='300'
-			></Image>
-		</Button>
+		<Link to='/home'>
+			<Button>
+				<Image
+					src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+					width='300'
+				></Image>
+			</Button>
+		</Link>
 	</div>,
 ]
 const LandingScreen = () => {
@@ -122,7 +133,9 @@ const LandingScreen = () => {
 						autoPlay
 						infinite
 						disableDotsControls
+						keyboardNavigation
 						autoPlayInterval={3000}
+						mouseTracking
 					/>
 				</div>
 				{/* <Row className='my-5'>
@@ -165,7 +178,16 @@ const LandingScreen = () => {
 						</Link>
 					</div>
 				</Row> */}
+				<div align='center' className='my-5'>
+					<Link to='/home'>
+						{' '}
+						<Button className='btn-out-primary'>
+							<h5>View All</h5>
+						</Button>
+					</Link>
+				</div>
 			</Container>
+
 			<Container>
 				<Col className='my-4'>
 					<e2>Want to know the journey of the plants?</e2>
