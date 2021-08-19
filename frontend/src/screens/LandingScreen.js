@@ -4,6 +4,55 @@ import { Button } from '@material-ui/core'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import AliceCarousel from 'react-alice-carousel'
+const handleDragStart = (e) => e.preventDefault()
+const responsive = {
+	0: { items: 1 },
+	767: { items: 2 },
+	1023: { items: 3 },
+}
+const items = [
+	<div className='item' data-value='1'>
+		<Button>
+			<Image
+				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+				width='300'
+			></Image>
+		</Button>
+	</div>,
+	<div className='item' data-value='2'>
+		<Button>
+			<Image
+				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+				width='300'
+			></Image>
+		</Button>
+	</div>,
+	<div className='item' data-value='3'>
+		<Button>
+			<Image
+				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+				width='300'
+			></Image>
+		</Button>
+	</div>,
+	<div className='item' data-value='4'>
+		<Button>
+			<Image
+				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+				width='300'
+			></Image>
+		</Button>
+	</div>,
+	<div className='item' data-value='5'>
+		<Button>
+			<Image
+				src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
+				width='300'
+			></Image>
+		</Button>
+	</div>,
+]
 const LandingScreen = () => {
 	return (
 		<>
@@ -64,13 +113,25 @@ const LandingScreen = () => {
 					></Image>
 				</div>
 				<e2>View Our Collection</e2>
-				<Row className='my-5'>
+				<div className='my-5 '>
+					<AliceCarousel
+						mouseTracking
+						items={items}
+						responsive={responsive}
+						controlsStrategy='responsive'
+						autoPlay
+						infinite
+						disableDotsControls
+						autoPlayInterval={3000}
+					/>
+				</div>
+				{/* <Row className='my-5'>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
 							src='https://ik.imagekit.io/jadebox/art-and-soil-bangalore-I5ofzP2nICE-unsplash_JHIDJUHfg.jpg?updatedAt=1628835637049'
 							fluid
-						></Image>
-						{/* <Row>
+						></Image> */}
+				{/* <Row>
 							<Col>
 								<s4>Plant Name</s4>
 							</Col>
@@ -78,7 +139,7 @@ const LandingScreen = () => {
 								<s4>Rs 400</s4>
 							</Col>
 						</Row> */}
-					</Col>
+				{/* </Col>
 					<Col xs={12} s={6} md={4} lg={3} className='my-5'>
 						<Image
 							src='https://ik.imagekit.io/jadebox/annie-spratt-fbAnIjhrOL4-unsplash_KfixXgqTg.jpg?updatedAt=1627315814371'
@@ -100,12 +161,10 @@ const LandingScreen = () => {
 					<div align='center' className='my-5 '>
 						<Link to='/home'>
 							{' '}
-							<Button className='btn btn-light my-3'>
-								<e4>View all</e4>
-							</Button>
+							
 						</Link>
 					</div>
-				</Row>
+				</Row> */}
 			</Container>
 			<Container>
 				<Col className='my-4'>

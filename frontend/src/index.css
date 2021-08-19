@@ -1,5 +1,7 @@
 /* USER DEFINED STYLES-UD */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'react-alice-carousel/lib/alice-carousel.css';
+
 @font-face {
 	font-family: 'zeichenregular';
 	src: url('zeichen.woff2') format('woff2'), url('zeichen.woff') format('woff');
@@ -393,6 +395,36 @@ p {
 .LinkContainer:hover {
 	color: red;
 }
+.alice-carousel__prev-btn .alice-carousel__prev-btn-item {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 0.1%;
+	transform: translateY(-100%);
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+
+	color: var(--bs-white);
+	padding-right: 17px;
+	padding-top: 12px;
+}
+.alice-carousel__next-btn .alice-carousel__next-btn-item {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	right: 0.1%;
+	transform: translateY(-100%);
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	background-color: #72a95c80;
+	border: 1px solid #ddd;
+	color: white;
+	padding-left: 20px;
+	padding-top: 12px;
+}
+
 /* EXPERIMENT */
 
 /* ENDS HERE */
@@ -418,7 +450,7 @@ h2 {
 	border-radius: 4%;
 }
 /* carousel  */
-.carousel {
+/* .carousel {
 	margin-top: 1vw;
 }
 .carousel-item-next,
@@ -449,7 +481,7 @@ h2 {
 	.carousel-caption h2 {
 		font-size: 2.5vw;
 	}
-}
+} */
 
 .btn-primary {
 	color: #fff;

@@ -15,6 +15,9 @@ const ProductEditScreen = ({ match, history }) => {
 	const [name, setName] = useState('')
 	const [price, setPrice] = useState(0)
 	const [image, setImage] = useState('')
+	const [image2, setImage2] = useState('')
+	const [image3, setImage3] = useState('')
+	const [image4, setImage4] = useState('')
 	const [brand, setBrand] = useState('')
 
 	const [category, setCategory] = useState('')
@@ -56,6 +59,10 @@ const ProductEditScreen = ({ match, history }) => {
 				setName(product.name)
 				setPrice(product.price)
 				setImage(product.image)
+				setImage2(product.image2)
+				setImage3(product.image3)
+				setImage4(product.image4)
+
 				setBrand(product.brand)
 				setCategory(product.category)
 				setCategory1(product.category1)
@@ -106,6 +113,9 @@ const ProductEditScreen = ({ match, history }) => {
 				name,
 				price,
 				image,
+				image2,
+				image3,
+				image4,
 				brand,
 				category,
 				category1,
@@ -268,6 +278,57 @@ const ProductEditScreen = ({ match, history }) => {
 									placeholder='Enter image url'
 									value={image}
 									onChange={(e) => setImage(e.target.value)}
+								></Form.Control>
+								<Form.File
+									id='image-file'
+									label='Choose File'
+									custom
+									onChange={uploadFileHandler}
+								></Form.File>
+								{uploading && <Loader />}
+							</Form.Group>
+
+							<Form.Group controlId='image2'>
+								<Form.Label>Image2</Form.Label>
+								<Form.Control
+									type='text'
+									placeholder='Enter image url'
+									value={image2}
+									onChange={(e) => setImage2(e.target.value)}
+								></Form.Control>
+								<Form.File
+									id='image-file'
+									label='Choose File'
+									custom
+									onChange={uploadFileHandler}
+								></Form.File>
+								{uploading && <Loader />}
+							</Form.Group>
+
+							<Form.Group controlId='image3'>
+								<Form.Label>Image3</Form.Label>
+								<Form.Control
+									type='text'
+									placeholder='Enter image url'
+									value={image3}
+									onChange={(e) => setImage3(e.target.value)}
+								></Form.Control>
+								<Form.File
+									id='image-file'
+									label='Choose File'
+									custom
+									onChange={uploadFileHandler}
+								></Form.File>
+								{uploading && <Loader />}
+							</Form.Group>
+
+							<Form.Group controlId='image'>
+								<Form.Label>Image4</Form.Label>
+								<Form.Control
+									type='text'
+									placeholder='Enter image url'
+									value={image4}
+									onChange={(e) => setImage4(e.target.value)}
 								></Form.Control>
 								<Form.File
 									id='image-file'
