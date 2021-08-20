@@ -57,6 +57,7 @@
 }
 .nav-link:hover {
 	text-decoration: underline 3px;
+	transition-duration: 0.5s;
 }
 .form-control::placeholder {
 	font-family: var(--bs-font-sans-serif);
@@ -65,7 +66,8 @@
 	font-size: 1rem;
 }
 .btn:hover {
-	color: red;
+	color: #72a95c80;
+	transition-duration: 0.5s;
 }
 
 @media (max-width: 576px) {
@@ -171,6 +173,11 @@ s4 {
 	font-size: 1rem;
 	font-weight: bold;
 }
+s5 {
+	font-family: var(--bs-font-sans-serif);
+	color: var(--bs-text);
+	font-size: 0.8rem;
+}
 u3 {
 	font-family: var(--bs-font-sans-serif);
 	color: var(--bs-text);
@@ -229,7 +236,8 @@ c3 {
 }
 .btn-custom-cont:hover {
 	color: var(--bs-text);
-	background-color: var(--bs-background);
+	background-color: #72a95c80;
+	transition-duration: 0.5s;
 }
 .btn-custom-out {
 	font-family: var(--bs-font-sans-serif);
@@ -243,8 +251,9 @@ c3 {
 	width: max-content;
 }
 .btn-custom-out:hover {
-	color: var(--bs-white);
-	background-color: var(--bs-primary);
+	color: var(--bs-text);
+	background-color: #72a95c80;
+	transition-duration: 0.5s;
 }
 .btn-out-primary {
 	font-family: var(--bs-font-sans-serif);
@@ -264,18 +273,21 @@ c3 {
 }
 .fas:hover {
 	color: black;
+	transition-duration: 0.5s;
 }
 .fab {
 	color: var(--bs-primary);
 }
 .fab:hover {
 	color: black;
+	transition-duration: 0.5s;
 }
 .far {
 	color: var(--bs-primary);
 }
 .far:hover {
 	color: black;
+	transition-duration: 0.5s;
 }
 @media (max-width: 576px) {
 	.main-story {
@@ -393,8 +405,10 @@ p {
 	margin: 1.5rem 0;
 }
 .LinkContainer:hover {
-	color: red;
+	color: var(--bs-primary);
+	transition-duration: 0.5s;
 }
+
 .alice-carousel__prev-btn .alice-carousel__prev-btn-item {
 	position: absolute;
 	z-index: 1;
@@ -423,6 +437,13 @@ p {
 	color: white;
 	padding-left: 20px;
 	padding-top: 12px;
+}
+.alice-carousel__dots .alice-carousel__dots-item {
+	height: 15px;
+	width: 15px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 /* EXPERIMENT */

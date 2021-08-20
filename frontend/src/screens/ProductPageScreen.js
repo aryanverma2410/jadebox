@@ -10,7 +10,6 @@ import {
 	Figure,
 	Container,
 	Image,
-	ButtonGroup,
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
@@ -23,8 +22,13 @@ import Loader from '../components/Loader'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
 import { createProductWishlist, getUserDetails } from '../actions/userActions'
 import { Button } from '@material-ui/core'
+import AliceCarousel from 'react-alice-carousel'
 // import { listPackaging } from '../actions/packagingActions'
 // import { savePackagingType } from '../actions/cartActions'
+
+// 	767: { items: 2 },
+// 	1023: { items: 3 },
+// }
 
 const ProductPageScreen = ({ history, match }) => {
 	const [qty, setQty] = useState(1)
@@ -52,7 +56,42 @@ const ProductPageScreen = ({ history, match }) => {
 		loading: loadingUserWishlist,
 		error: errorUserWishlist,
 	} = userWishlistCreate
-
+	const items = [
+		<div className='item' data-value='1'>
+			<Figure.Image
+				src={product.image}
+				alt={product.name}
+				fluid
+				width='600'
+			></Figure.Image>
+		</div>,
+		<div className='item' data-value='2'>
+			<Figure.Image
+				src={product.image2}
+				alt={product.name}
+				fluid
+				width='600'
+			></Figure.Image>
+		</div>,
+		<div className='item' data-value='3'>
+			<Figure.Image
+				src={product.image3}
+				alt={product.name}
+				fluid
+				width='600'
+			></Figure.Image>
+		</div>,
+		<div className='item' data-value='4'>
+			<Link to='/home'>
+				<Figure.Image
+					src={product.image4}
+					alt={product.name}
+					fluid
+					width='600'
+				></Figure.Image>
+			</Link>
+		</div>,
+	]
 	const userDetails = useSelector((state) => state.userDetails)
 	const { user } = userDetails
 
@@ -95,32 +134,81 @@ const ProductPageScreen = ({ history, match }) => {
 			) : (
 				<>
 					<Container>
-						<Row>
-							<Col>
-								<Link to='/'>
-									<h7 className='my-3'>Home {'>'} </h7>
-								</Link>
-								<Link to='/home'>
-									<h7 className='my-3'>Catalogue {'>'} </h7>
-								</Link>
-								<Link to={`/search/${product.category1}`}>
-									<h7 className='my-3'>
-										{product.category1} {'>'}{' '}
-									</h7>
-								</Link>
-								<Link to={`/search/${product.category2}`}>
-									<h7 className='my-3'>{product.category2} </h7>
-								</Link>
+						{/* <div className='my-4'>
+							<link to='/'>Home {'>'}</link>
+							<Link to='/home'>
+								<h7 className='my-3'>Catalogue {'>'} </h7>
+							</Link>
+							<Link to={`/search/${product.category1}`}>
+								<h7 className='my-3'>
+									{product.category1} {'>'}{' '}
+								</h7>
+							</Link>
+							<Link to={`/search/${product.category2}`}>
+								<h7 className='my-3'>{product.category2} </h7>
+							</Link>
+						</div> */}
+						<div className='my-4'>
+							{/* <Breadcrumb>
+								<Breadcrumb.Item href='#'>Home</Breadcrumb.Item>
+								<Breadcrumb.Item href='/home'>Catalogue</Breadcrumb.Item>
+								<Breadcrumb.Item href={`/search/${product.category1}`}>
+									{product.category1}
+								</Breadcrumb.Item>
+								<Breadcrumb.Item href={`/search/${product.category2}`}>
+									{product.category2}
+								</Breadcrumb.Item>
+								<Breadcrumb.Item active href={product.name}>
+									{product.name}
+								</Breadcrumb.Item>
+							</Breadcrumb> */}
 
-								<Col className='my-5' align='center'>
-									<Figure.Image
+							<ol class='breadcrumb'>
+								<li class='breadcrumb-item'>
+									<a href='#'>
+										<s5>Home</s5>
+									</a>
+								</li>
+								<li class='breadcrumb-item'>
+									<a href='/home'>
+										<s5>Catalogue</s5>
+									</a>
+								</li>
+								<li class='breadcrumb-item'>
+									<a href={`/search/${product.category1}`}>
+										<s5>{product.category1}</s5>
+									</a>
+								</li>
+								<li class='breadcrumb-item'>
+									<a href={`/search/${product.category2}`}>
+										<s5> {product.category2}</s5>
+									</a>
+								</li>
+
+								<li class='breadcrumb-item active'>
+									<s5>{product.name}</s5>
+								</li>
+							</ol>
+						</div>
+						<Row>
+							<Col md={12} lg={6}>
+								{/* <Figure.Image
 										src={product.image}
 										alt={product.name}
 										fluid
 										width='600'
-									/>
-								</Col>
-								<Col align='center'>
+									/> */}
+
+								<AliceCarousel
+									mouseTracking
+									items={items}
+									controlsStrategy='responsive'
+									keyboardNavigation
+									mouseTracking
+									disableButtonsControls
+								/>
+
+								{/* <Col align='center'>
 									<ButtonGroup aria-label='Basic example'>
 										<Button variant='secondary'>
 											<i class='fas fa-circle'></i>
@@ -135,10 +223,10 @@ const ProductPageScreen = ({ history, match }) => {
 											<i class='fas fa-circle'></i>
 										</Button>
 									</ButtonGroup>
-								</Col>
+								</Col> */}
 							</Col>
 
-							<Col md={6} className='my-5'>
+							<Col md={12} lg={6}>
 								<ListGroup className='mx-1 my-1 px-1' variant='flush'>
 									<ListGroup>
 										<h1>{product.name}</h1>
@@ -175,7 +263,8 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\sun.svg'
 															width={60}
-															fluid></Image>
+															fluid
+														></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -191,7 +280,8 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\water.svg'
 															width={47.2}
-															fluid></Image>
+															fluid
+														></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -207,7 +297,8 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\temp.svg'
 															fluid
-															width={30}></Image>
+															width={30}
+														></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -223,7 +314,8 @@ const ProductPageScreen = ({ history, match }) => {
 														<Image
 															src='\uploads\ruler.svg'
 															fluid
-															width={59}></Image>
+															width={59}
+														></Image>
 													</div>
 												</Row>
 												<Row align='center'>
@@ -286,7 +378,8 @@ const ProductPageScreen = ({ history, match }) => {
 													<select
 														class='form-select  bg-color: transparent'
 														value={qty}
-														onChange={(e) => setQty(e.target.value)}>
+														onChange={(e) => setQty(e.target.value)}
+													>
 														{[...Array(product.countInStock).keys()].map(
 															(x) => (
 																<option key={x + 1} value={x + 1}>
@@ -320,7 +413,8 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-cont'
-												disabled={product.countInStock === 0}>
+												disabled={product.countInStock === 0}
+											>
 												Add to cart
 											</Button>
 
@@ -329,7 +423,8 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-out'
-												disabled={product.countInStock === 0}>
+												disabled={product.countInStock === 0}
+											>
 												Buy Now
 											</Button>
 										</Col>
@@ -339,7 +434,8 @@ const ProductPageScreen = ({ history, match }) => {
 												className='btn btn-block mx-1 my-2 rounded-3'
 												type='button'
 												class='btn-custom-out'
-												disabled={product.countInStock === 0}>
+												disabled={product.countInStock === 0}
+											>
 												<i class='fas fa-heart mx-2'></i>
 												Keep as a wish
 											</Button>
@@ -502,7 +598,8 @@ const ProductPageScreen = ({ history, match }) => {
 													<select
 														class='form-select  bg-color: transparent'
 														value={rating}
-														onChange={(e) => setRating(e.target.value)}>
+														onChange={(e) => setRating(e.target.value)}
+													>
 														<option value=''>Select...</option>
 														<option value='1'>1 - Poor</option>
 														<option value='2'>2 - Fair</option>
@@ -517,17 +614,18 @@ const ProductPageScreen = ({ history, match }) => {
 														as='textarea'
 														row='3'
 														value={comment}
-														onChange={(e) =>
-															setComment(e.target.value)
-														}></Form.Control>
+														onChange={(e) => setComment(e.target.value)}
+													></Form.Control>
 												</Form.Group>
-												<Button
+												<button
 													className='rounded-3 my-auto'
 													disabled={loadingProductReview}
 													type='submit'
-													variant='primary'>
+													className='btn-custom-cont'
+													// variant='primary'
+												>
 													Submit
-												</Button>
+												</button>
 											</Form>
 										) : (
 											<Message>

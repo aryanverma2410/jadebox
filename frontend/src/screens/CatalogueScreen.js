@@ -130,13 +130,18 @@ const CatalogueScreen = ({ match }) => {
 					<Container>
 						<Row className='catalogue-page'>
 							<Col className='my-5'>
-								<Link to='/'>
-									<h7 className='my-3'>Home {'>'} </h7>
-								</Link>
-								<Link to='/home'>
-									{' '}
-									<h7 className='my-3'>Categories</h7>
-								</Link>
+								<ol class='breadcrumb'>
+									<li class='breadcrumb-item'>
+										<a href='#'>
+											<s5>Home</s5>
+										</a>
+									</li>
+									<li class='breadcrumb-item'>
+										<a href='/home'>
+											<s5>Catalogue</s5>
+										</a>
+									</li>
+								</ol>
 
 								<h5 className='my-3'>Categories</h5>
 								<Form>
