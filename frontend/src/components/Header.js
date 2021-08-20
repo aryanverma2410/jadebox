@@ -2,21 +2,10 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
-import {
-	Navbar,
-	Nav,
-	Container,
-	NavDropdown,
-	Figure,
-	Table,
-	Row,
-	Col,
-	Dropdown,
-} from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown, Figure } from 'react-bootstrap'
 import { logout } from '../actions/userActions'
 import SearchBox from './SearchBox.js'
 import logo from '../img/logo.png'
-import DropdownMenu from 'react-overlays/esm/DropdownMenu'
 const Header = () => {
 	const dispatch = useDispatch()
 
@@ -26,6 +15,8 @@ const Header = () => {
 	const logoutHandler = () => {
 		dispatch(logout())
 	}
+	const cart = useSelector((state) => state.cart)
+	const { cartItems } = cart
 
 	return (
 		<header>
@@ -99,13 +90,13 @@ const Header = () => {
 							/>
 
 							<LinkContainer to='/wishlist'>
-								<Nav.Link className='my-2'>
+								<Nav.Link className='my-2 mx-3'>
 									{' '}
 									<i className='fas fa-heart fa-lg	'></i>
 								</Nav.Link>
 							</LinkContainer>
 							<LinkContainer to='/cart'>
-								<Nav.Link className='my-2'>
+								<Nav.Link className='my-2 mx-3'>
 									{' '}
 									<i className='fas fa-shopping-cart fa-lg	'></i>
 								</Nav.Link>
