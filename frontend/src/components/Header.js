@@ -1,8 +1,17 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, NavDropdown, Figure } from 'react-bootstrap'
+import {
+	Navbar,
+	Nav,
+	Container,
+	NavDropdown,
+	Figure,
+	Row,
+	Col,
+} from 'react-bootstrap'
 import { logout } from '../actions/userActions'
 import SearchBox from './SearchBox.js'
 import logo from '../img/logo.png'
@@ -42,13 +51,62 @@ const Header = () => {
 							menuVariant='dark'
 							className='mx-0'
 						>
-							<NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
-							<NavDropdown.Item eventKey='4.2'>Another action</NavDropdown.Item>
-							<NavDropdown.Item eventKey='4.3'>
-								Something else here
-							</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item eventKey='4.4'>Separated link</NavDropdown.Item>
+							<Row>
+								<Col>
+									{/* <ul className='dropdown-menu'>
+										<li>
+											<a href='#'>Action</a>
+										</li>
+										<li>
+											<a href='#'>Actiossssn</a>
+										</li>
+										<li>
+											<a href='#'>Action</a>
+										</li>
+									</ul> */}
+									<NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.2'>
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.3'>
+										Something else here
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item eventKey='4.4'>
+										Separated link
+									</NavDropdown.Item>{' '}
+									{/* <LinkContainer>
+										<h6>Heading</h6>
+									</LinkContainer>
+									<hr></hr>
+									<h7>Topics</h7>
+								</Col>
+
+								<Col lg={6}>
+									{/* <ul className='dropdown-menu'>
+										<li>
+											<a href='#'>Action</a>
+										</li>
+										<li>
+											<a href='#'>Actiossssn</a>
+										</li>
+										<li>
+											<a href='#'>Action</a>
+										</li>
+									</ul> */}
+									{/* <NavDropdown.Item eventKey='4.1'>Action</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.2'>
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Item eventKey='4.3'>
+										Something else here
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item eventKey='4.4'>
+										Separated link
+									</NavDropdown.Item> */}
+								</Col>
+							</Row>
 						</NavDropdown>
 
 						<LinkContainer to='/blog'>

@@ -136,10 +136,8 @@ const CatalogueScreen = ({ match }) => {
 											<s5>Home</s5>
 										</a>
 									</li>
-									<li class='breadcrumb-item'>
-										<a href='/home'>
-											<s5>Catalogue</s5>
-										</a>
+									<li class='breadcrumb-item active'>
+										<s5>Catalogue</s5>
 									</li>
 								</ol>
 

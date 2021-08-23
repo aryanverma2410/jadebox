@@ -6,6 +6,21 @@ const ContactUsScreen = () => {
 	return (
 		<>
 			<Container align='center'>
+				<ol class='breadcrumb'>
+					<li class='breadcrumb-item'>
+						<a href='#'>
+							<s5>Home</s5>
+						</a>
+					</li>
+					<li class='breadcrumb-item'>
+						<a href='home'>
+							<s5>Catalogue</s5>
+						</a>
+					</li>
+					<li class='breadcrumb-item active'>
+						<s5>Contact Us</s5>
+					</li>
+				</ol>
 				<div>
 					<h1 align='center' className='my-5'>
 						Social Contacts

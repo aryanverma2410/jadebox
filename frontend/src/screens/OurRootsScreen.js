@@ -6,7 +6,23 @@ import { Image, Row, Col } from 'react-bootstrap'
 const OurRoots = () => {
 	return (
 		<>
+			{' '}
 			<Container align='center'>
+				<ol class='breadcrumb'>
+					<li class='breadcrumb-item'>
+						<a href='#'>
+							<s5>Home</s5>
+						</a>
+					</li>
+					<li class='breadcrumb-item'>
+						<a href='home'>
+							<s5>Catalogue</s5>
+						</a>
+					</li>
+					<li class='breadcrumb-item active'>
+						<s5>Our Roots</s5>
+					</li>
+				</ol>
 				{/* <Image
 					src='https://ik.imagekit.io/jadebox/logo_atuzP2E8a1.png?updatedAt=1628751984969'
 					className='my-3'
