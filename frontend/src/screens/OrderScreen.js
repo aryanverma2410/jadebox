@@ -33,6 +33,24 @@ const OrderScreen = ({ match, history }) => {
 	const orderDeliver = useSelector((state) => state.orderDeliver)
 	const { loading: loadingDeliver, success: successDeliver } = orderDeliver
 
+	const getData = (data) => {
+		return fetch(`http://localhost:5000/api/payment`, {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+		})
+			.then((response) => response.json())
+			.catch((err) => console.log(err))
+	}
+	const makePayment = () => {
+		getData({ amount: 500, email: 'abc@gmail.com' }).then((response) =>
+			console.log(response)
+		)
+	}
+
 	if (!loading) {
 		//   Calculate prices
 		const addDecimals = (num) => {
@@ -208,6 +226,7 @@ const OrderScreen = ({ match, history }) => {
 											onSuccess={successPaymentHandler}
 										/>
 									)}
+									<button onClick={makePayment}>Pay Using Paytm</button>
 								</ListGroup.Item>
 							)}
 							{loadingDeliver && <Loader />}
@@ -219,7 +238,8 @@ const OrderScreen = ({ match, history }) => {
 										<Button
 											type='button'
 											className='btn btn-block'
-											onClick={deliverHandler}>
+											onClick={deliverHandler}
+										>
 											Mark as delivered
 										</Button>
 									</ListGroup.Item>

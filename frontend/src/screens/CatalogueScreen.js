@@ -5,7 +5,7 @@ import Product from '../components/Product'
 import Message from '../components/Message.js'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
-
+import Filter from '../components/Filter'
 import { Row, Col, Card, Container, Form } from 'react-bootstrap'
 import { listProducts } from '../actions/productActions'
 import ProductCarousel from '../components/ProductCarousel'
@@ -39,6 +39,16 @@ const CatalogueScreen = ({ match }) => {
 		<>
 			{!keyword ? (
 				<>
+					<div>
+						{/* <Filter
+							size={this.state.size}
+							sort={this.state.sort}
+							handleChangeSize={this.handleChangeSize}
+							handleChangeSort={this.handleChangeSort}
+							count={this.state.filteredProducts.length}
+						></Filter>
+						<hr></hr> */}
+					</div>
 					{/* <Jumbo />
 					<ProductCarousel /> */}
 					<Container>
