@@ -36,7 +36,7 @@ const Footer = () => {
 						</h7>
 
 						<h7>
-							<h5 className='my-3'>Phone-</h5> 9415010585
+							<h5 className='my-3'>Phone-</h5> 8756670902
 						</h7>
 						<h7>
 							<h5 className='my-3'>Email- </h5>srihanumantnursery@gmail.com

@@ -226,7 +226,6 @@ const OrderScreen = ({ match, history }) => {
 											onSuccess={successPaymentHandler}
 										/>
 									)}
-									<button onClick={makePayment}>Pay Using Paytm</button>
 								</ListGroup.Item>
 							)}
 							{loadingDeliver && <Loader />}
