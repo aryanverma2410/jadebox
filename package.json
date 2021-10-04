@@ -48,6 +48,7 @@
     "react-aspect-ratio": "^1.0.49",
     "react-bootstrap-range-slider": "^3.0.2",
     "react-dropdown": "^1.9.2",
+    "react-native-razorpay": "^2.2.8",
     "react-select": "^4.3.1",
     "speakeasy": "^2.0.0",
     "uuid": "^8.3.2"

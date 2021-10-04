@@ -10,7 +10,7 @@ import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 import packagingRoutes from './routes/packagingRoutes.js'
-import paymentRoutes from './routes/paymentRoutes.js'
+// import paymentRoutes from './routes/paymentRoutes.js'
 import cors from 'cors'
 dotenv.config()
 
@@ -34,7 +34,7 @@ app.get('/api/config/paypal', (req, res) =>
 )
 
 app.use(cors())
-app.use('/api', paymentRoutes)
+// app.use('/api', paymentRoutes)
 
 const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
