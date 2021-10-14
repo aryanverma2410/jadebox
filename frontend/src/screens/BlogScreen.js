@@ -25,7 +25,7 @@ const BlogScreen = () => {
 						TOP<br></br> PICK<br></br> ARTICLE
 					</h1>
 					<p>
-						Nullam massa ex, ornare vitae aliquam ac, feugiat at leo. Donec at
+						Nullam massa e, ornare vitae aliquam ac, feugiat at leo. Donec at
 						ultrices turpis. Etiam a congue lorem. Duis est est, euismod eu
 						finibus nec, laoreet a magna. Aenean sit amet augue mollis dui
 						mattis vestibulum. Praesent auctor mi sed ultrices tristique.
