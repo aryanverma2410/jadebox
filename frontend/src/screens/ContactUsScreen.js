@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { LinkContainer } from 'react-router-bootstrap'
 const ContactUsScreen = () => {
 	return (
 		<>

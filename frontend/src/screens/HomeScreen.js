@@ -6,7 +6,7 @@ import Message from '../components/Message.js'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
 import Jumbo from '../components/Jumbo'
-import { Row, Col, Card } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { listProducts } from '../actions/productActions'
 import ProductCarousel from '../components/ProductCarousel'
 
@@ -40,7 +40,8 @@ const HomeScreen = ({ match }) => {
 							<select
 								class='form-select  bg-color: transparent font-size:2px'
 								value={sortBy}
-								onChange={(e) => setSortBy(e.target.value)}>
+								onChange={(e) => setSortBy(e.target.value)}
+							>
 								<option key={1} value={1}>
 									Sort by: Newest Arrivals
 								</option>
@@ -79,7 +80,8 @@ const HomeScreen = ({ match }) => {
 							<select
 								class='form-select  bg-color: transparent font-size:2px'
 								value={sortBy}
-								onChange={(e) => setSortBy(e.target.value)}>
+								onChange={(e) => setSortBy(e.target.value)}
+							>
 								<option key={1} value={1}>
 									Sort by: Newest Arrivals
 								</option>
@@ -160,7 +162,8 @@ const HomeScreen = ({ match }) => {
 																sm={12}
 																md={6}
 																lg={4}
-																xl={3}>
+																xl={3}
+															>
 																<Product product={product} />
 															</Col>
 														))}
@@ -185,7 +188,8 @@ const HomeScreen = ({ match }) => {
 																		sm={12}
 																		md={6}
 																		lg={4}
-																		xl={3}>
+																		xl={3}
+																	>
 																		<Product product={product} />
 																	</Col>
 																))}
@@ -208,7 +212,8 @@ const HomeScreen = ({ match }) => {
 																		sm={12}
 																		md={6}
 																		lg={4}
-																		xl={3}>
+																		xl={3}
+																	>
 																		<Product product={product} />
 																	</Col>
 																))}
@@ -225,7 +230,8 @@ const HomeScreen = ({ match }) => {
 					<Paginate
 						pages={pages}
 						page={page}
-						keyword={keyword ? keyword : ''}></Paginate>
+						keyword={keyword ? keyword : ''}
+					></Paginate>
 				</>
 			)}
 		</>

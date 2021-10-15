@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import { Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {

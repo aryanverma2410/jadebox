@@ -1,5 +1,4 @@
 import { Container } from '@material-ui/core'
-import { display } from '@material-ui/system'
 import React from 'react'
 import { Image, Row, Col } from 'react-bootstrap'
 

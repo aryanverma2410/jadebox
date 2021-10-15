@@ -51,11 +51,7 @@ const ProductPageScreen = ({ history, match }) => {
 		error: errorProductReview,
 	} = productReviewCreate
 	const userWishlistCreate = useSelector((state) => state.userWishlistCreate)
-	const {
-		success: successUserWishlist,
-		loading: loadingUserWishlist,
-		error: errorUserWishlist,
-	} = userWishlistCreate
+	const { success: successUserWishlist } = userWishlistCreate
 	const items = [
 		<div className='item' data-value='1'>
 			<Figure.Image
@@ -117,9 +113,6 @@ const ProductPageScreen = ({ history, match }) => {
 	const submitHandler = (e) => {
 		e.preventDefault()
 		dispatch(createProductReview(match.params.id, { rating, comment }))
-	}
-	const wishlistHandler = () => {
-		dispatch(createProductWishlist(user._id, product._id))
 	}
 
 	return (

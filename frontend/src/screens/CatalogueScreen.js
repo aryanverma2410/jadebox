@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import Product from '../components/Product'
 import Message from '../components/Message.js'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
-import Filter from '../components/Filter'
-import { Row, Col, Card, Container, Form } from 'react-bootstrap'
+import { Row, Col, Container, Form } from 'react-bootstrap'
 import { listProducts } from '../actions/productActions'
-import ProductCarousel from '../components/ProductCarousel'
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css'
 import Slider from '@material-ui/core/Slider'
 
@@ -24,7 +21,7 @@ const CatalogueScreen = ({ match }) => {
 		setValue(newValue)
 		console.log(newValue)
 	}
-	const [sortBy, setSortBy] = useState(1)
+	const [sortBy] = useState(1)
 
 	const dispatch = useDispatch()
 

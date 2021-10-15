@@ -25,8 +25,6 @@ const Header = () => {
 		dispatch(logout())
 	}
 	const cart = useSelector((state) => state.cart)
-	const { cartItems } = cart
-
 	return (
 		<header>
 			<Navbar variant='light' expand='xxl' collapseOnSelect>

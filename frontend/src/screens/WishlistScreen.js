@@ -1,40 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import {
-	Table,
-	Form,
-	Button,
-	Row,
-	Col,
-	ListGroup,
-	Figure,
-} from 'react-bootstrap'
-import { LinkContainer, Link } from 'react-router-bootstrap'
+import { Button, Row, Col, ListGroup, Figure } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import {
-	createProductWishlist,
-	getUserDetails,
-	resendConfirmationEmail,
-	updateUserProfile,
-} from '../actions/userActions'
-import { listMyOrders } from '../actions/orderActions'
-import {
-	USER_CREATE_WISHLIST_FAIL,
-	USER_CREATE_WISHLIST_REQUEST,
-	USER_CREATE_WISHLIST_RESET,
-	USER_UPDATE_PROFILE_RESET,
-} from '../constants/userConstants'
+import { createProductWishlist, getUserDetails } from '../actions/userActions'
+import { USER_CREATE_WISHLIST_RESET } from '../constants/userConstants'
 import { listProducts } from '../actions/productActions'
-import Product from '../components/Product'
 import Rating from '../components/Rating'
 
 const WishlistScreen = ({ location, history }) => {
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
 	// const [password, setPassword] = useState('')
 	// const [confirmPassword, setConfirmPassword] = useState('')
-	const [message, setMessage] = useState(null)
+	const [message] = useState(null)
 	// eslint-disable-next-line
 	const [isConfirmed, setIsConfirmed] = useState(false)
 
@@ -47,20 +25,10 @@ const WishlistScreen = ({ location, history }) => {
 	const { userInfo } = userLogin
 
 	const productList = useSelector((state) => state.productList)
-	const {
-		loading: loadingProduct,
-		error: errorProduct,
-		products,
-		page,
-		pages,
-	} = productList
+	const { products } = productList
 
 	const userWishlistCreate = useSelector((state) => state.userWishlistCreate)
-	const {
-		success,
-		loading: loadingUserWishlist,
-		error: errorUserWishlist,
-	} = userWishlistCreate
+	const { success, error: errorUserWishlist } = userWishlistCreate
 
 	useEffect(() => {
 		if (!userInfo) {
@@ -160,7 +128,8 @@ const WishlistScreen = ({ location, history }) => {
 													<Button
 														variant='danger'
 														className='btn-sm'
-														onClick={() => deleteHandler(product._id)}>
+														onClick={() => deleteHandler(product._id)}
+													>
 														<i className='fas fa-trash'></i>
 													</Button>
 												</Col>

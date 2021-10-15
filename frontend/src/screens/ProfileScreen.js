@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Table, Form, Button, Row, Col, ListGroup } from 'react-bootstrap'
+import { Table, Form, Button, Row, Col } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -99,7 +99,8 @@ const ProfileScreen = ({ location, history }) => {
 								type='name'
 								placeholder='Enter name'
 								value={name}
-								onChange={(e) => setName(e.target.value)}></Form.Control>
+								onChange={(e) => setName(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='email'>
@@ -111,14 +112,16 @@ const ProfileScreen = ({ location, history }) => {
 									placeholder='Enter email'
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
-									readOnly></Form.Control>
+									readOnly
+								></Form.Control>
 							) : (
 								<Form.Control
 									className={'form-control is-invalid'}
 									type='email'
 									placeholder='Enter email'
 									value={email}
-									onChange={(e) => setEmail(e.target.value)}></Form.Control>
+									onChange={(e) => setEmail(e.target.value)}
+								></Form.Control>
 							)}
 							{user.isConfirmed ? (
 								<i style={{ color: 'green' }}>Verified</i>
@@ -130,7 +133,8 @@ const ProfileScreen = ({ location, history }) => {
 										<Button
 											className='btn btn-sm'
 											variant='outline-danger'
-											onClick={resendHandler}>
+											onClick={resendHandler}
+										>
 											Resend Verification Mail
 										</Button>
 									)}
@@ -144,7 +148,8 @@ const ProfileScreen = ({ location, history }) => {
 								type='password'
 								placeholder='Enter password'
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}></Form.Control>
+								onChange={(e) => setPassword(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='confirmPassword'>
@@ -153,9 +158,8 @@ const ProfileScreen = ({ location, history }) => {
 								type='password'
 								placeholder='Confirm password'
 								value={confirmPassword}
-								onChange={(e) =>
-									setConfirmPassword(e.target.value)
-								}></Form.Control>
+								onChange={(e) => setConfirmPassword(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Button type='submit' variant='primary'>

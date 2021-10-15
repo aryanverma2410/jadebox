@@ -19,8 +19,6 @@ const ResetPasswordScreen = ({ match, history }) => {
 	const [message, setMessage] = useState(null)
 
 	const dispatch = useDispatch()
-	const userLogin = useSelector((state) => state.userLogin)
-	const { loading: loadingLogin, error: errorLogin, userInfo } = userLogin
 
 	const userDetails = useSelector((state) => state.userDetails)
 	const { loading, error, user } = userDetails
@@ -82,7 +80,8 @@ const ResetPasswordScreen = ({ match, history }) => {
 								placeholder={name}
 								value={name}
 								onChange={(e) => setName(e.target.value)}
-								readOnly></Form.Control>
+								readOnly
+							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='email'>
@@ -92,7 +91,8 @@ const ResetPasswordScreen = ({ match, history }) => {
 								placeholder={email}
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
-								readOnly></Form.Control>
+								readOnly
+							></Form.Control>
 						</Form.Group>
 
 						{/* <Form.Group controlId='isconfirmed'>
@@ -109,7 +109,8 @@ const ResetPasswordScreen = ({ match, history }) => {
 								type='password'
 								placeholder='Enter password'
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}></Form.Control>
+								onChange={(e) => setPassword(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='confirmPassword'>
@@ -118,9 +119,8 @@ const ResetPasswordScreen = ({ match, history }) => {
 								type='password'
 								placeholder='Confirm password'
 								value={confirmPassword}
-								onChange={(e) =>
-									setConfirmPassword(e.target.value)
-								}></Form.Control>
+								onChange={(e) => setConfirmPassword(e.target.value)}
+							></Form.Control>
 						</Form.Group>
 
 						<Button type='submit' variant='primary'>

@@ -1,6 +1,5 @@
 import { Card, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Rating from './Rating'
 import AspectRatio from 'react-aspect-ratio'
 const Product = ({ product }) => {
 	return (

@@ -45,11 +45,6 @@ const OrderScreen = ({ match, history }) => {
 			.then((response) => response.json())
 			.catch((err) => console.log(err))
 	}
-	const makePayment = () => {
-		getData({ amount: 500, email: 'abc@gmail.com' }).then((response) =>
-			console.log(response)
-		)
-	}
 
 	if (!loading) {
 		//   Calculate prices

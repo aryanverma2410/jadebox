@@ -2,10 +2,8 @@ import React from 'react'
 import { Col, Row, Image, Container } from 'react-bootstrap'
 import { Button } from '@material-ui/core'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import AliceCarousel from 'react-alice-carousel'
-const handleDragStart = (e) => e.preventDefault()
 const responsive = {
 	0: { items: 1 },
 	767: { items: 2 },
